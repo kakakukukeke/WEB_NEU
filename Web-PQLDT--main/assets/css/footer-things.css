@@ -1,0 +1,161 @@
+/* Footer */
+.footer {
+    height: 70vh;
+    background-color: #0065CA;
+}
+
+#footer_container {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: white;
+}
+@media screen and (min-width:1280px){
+    #footer_container {
+        height: 90%;
+    }
+    #bot-socialLinks{
+        display: none;
+    }
+}
+@media screen and (max-width:1280px) {
+    #footer_container{
+        height: 80%;
+    }
+    #bot-socialLinks{
+        display: inline;
+    }
+}
+/* Left */
+#footer_info {
+    position: relative;
+    margin-top: 5%;
+}
+#footer_info img{
+    position: absolute;
+    top: 12%;
+}
+
+@media screen and (min-width:960px) {
+    .footer_info_schoolName{
+        margin-left: 18%;
+    }
+}
+@media screen and (max-width:960px) {
+    .footer_info_schoolName{
+        margin-left: 25%;
+    }
+}
+/* Middle */
+#footer_quote{
+    margin-top: 8%;
+    text-align: center;
+}
+/* Right */
+#footer_contact{
+    margin-top: 6%;
+    text-align: right;
+}
+#footer_contact h3{
+    margin-bottom: 5%;
+}
+#footer_contact h4{
+    margin-bottom: 3%;
+}
+
+#footer_copyright {
+    height: 10%;
+    background-color:  rgb(69, 69, 69);
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+}
+
+@media screen and (max-width: 800px) {
+    .footer {
+        height: auto;
+    }
+
+    #footer_container {
+        flex-direction: column;
+    }
+}
+
+/* Sidebar for social media links */
+.side_social_link {
+    position: sticky;
+    float: right;
+    z-index: 999;
+    height: 100vh;
+    width: 3vw;
+    background-color: transparent;
+    filter: contrast(150%);
+}
+@media screen and (max-width:1280px) {
+    .side_social_link{
+        display: none;
+    }
+}
+
+#share_icon {
+    margin-top: 130px;
+}
+#bot-social_media_icons{
+    margin: 0;
+    filter: contrast(150%);
+}
+#social_media_icons {
+    margin-top: 50px;
+}
+
+#social_media_icons img,
+#share_icon img , #bot-social_media_icons img{
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    transition: transform 0.5 ease;
+}
+
+#social_media_icons img:hover,
+#share_icon img:hover , #bot-social_media_icons img:hover{
+    transform: translateY(-3px);
+}
+@media screen and (max-width: 1536px) {
+    .side_social_link {
+        top: 0;
+        right: 0;
+    }
+}
+@media screen and (max-width: 800px) {
+    .side_social_link {
+        top: -20px;
+        right:30px;
+    }
+}
+/* Button scroll to top*/
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    height: 45px;
+    width: 45px;
+    
+    bottom: 10px;
+    right: 60px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: hsl(210, 100%, 50%);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 100%;
+    transition: transform 0.5s ease;
+}
+
+#scrollToTopBtn:hover {
+    transform: translateY(-5px);
+}

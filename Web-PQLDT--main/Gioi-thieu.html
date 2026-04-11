@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        // Apply dark mode trước khi render để tránh flash
+        (function() {
+            var stored = localStorage.getItem('neu_darkmode');
+            var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (stored === '1' || (stored === null && prefersDark)) {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu trường Đại học Kinh tế Quốc dân</title>
+    <link rel="icon" href="./assets/img/Logo-NEU.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.5.1-web/fontawesome-free-6.5.1-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/fonts/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/footer-things.css">
+    <link rel="stylesheet" href="./assets/css/Gioi-thieu-part1.css">
+    <link rel="stylesheet" href="./assets/css/Gioi-thieu-part2.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./assets/css/app_extras.css">
+</head>
+
+<body>
+    <div class="app">
+        <!-- header -->
+        <header class="header">
+            <div class="grid">
+                <div class="grid__row">
+                    <!-- header-left -->
+                    <div class="header-left">
+                        <a href="./index.html" style="display:flex;align-items:center;text-decoration:none;cursor:pointer;">
+                        <div class="header-left__logo">
+                            <img src="./assets/img/Logo-NEU.png" alt="">
+                        </div>
+                        <div class="header-left__name">
+                            <span class="header-left__vietnamese-name">ĐẠI HỌC KINH TẾ QUỐC DÂN</span>
+                            <span class="header-left__english-name">PHÒNG QUẢN LÝ ĐÀO TẠO</span>
+                        </div>
+                        </a>
+                    </div>
+
+                    <!-- header with search -->
+                    <div class="header-with-search">
+                        <div class="header__search">
+                            <div class="header__search-input-wrap">
+                                <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm">
+
+                                <!-- search history -->
+                                <div class="header__search-history">
+                                    <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                                    <ul class="header__search-history-list">
+                                        <li class="header__search-history-item">
+                                            <a href="">Học công nghệ thông tin ở NEU dễ có người yêu không?</a>
+                                        </li>
+                                        <li class="header__search-history-item">
+                                            <a href="">Cách làm chủ môn thiết kế web trong 1 đêm?</a>
+                                        </li>
+                                        <li class="header__search-history-item">
+                                            <a href="">Làm sao để học ít mà vẫn có học bổng...</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <button class="header__search-btn">
+                                <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+
+
+
+                    </div>
+
+                    <!-- header with flags -->
+                    <div class="header__search-flags">
+                        <img src="./assets/img/vietnam-flag.webp" alt="">
+                        <img src="./assets/img/britainflag.png" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- navigation bar -->
+        <div class="app__nav">
+            <label for="nav-mobile-input" class="app__nav-bars-btn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+
+            <input hidden type="checkbox" class="app__nav-input" id="nav-mobile-input">
+
+            <label for="nav-mobile-input" class="app__nav-overlay"></label>
+            <label for="nav-mobile-input" class="app__nav-mobile">
+                <label class="app__nav-mobile-close" for="nav-mobile-input">
+                    <i class="fa-solid fa-xmark"></i>
+                </label>
+                <ul class="nav__mobile-list">
+                    <li>
+                        <a href="./Gioi-thieu.html" class="nav__mobile-link">
+                            <p>giới thiệu</p>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./tintuc-sukien.html" class="nav__mobile-link">
+                            <p>Tin tức</p>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./tintuc-sukien.html" class="nav__mobile-link">
+                            <p>Sự kiện nổi bật</p>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./admissions.html" class="nav__mobile-link">
+                            <p>Tuyển sinh</p>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./Chuong-trinh-dao-tao.html" class="nav__mobile-link">
+                            <p>Đào tạo</p>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./sinh-vien.html" class="nav__mobile-link">
+                            <p>Sinh viên</p>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./nghien-cuu-va-hop-tac-doi-ngoai.html" class="nav__mobile-link">
+                            <p>Nghiên cứu</p>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./nghien-cuu-va-hop-tac-doi-ngoai.html" class="nav__mobile-link">
+                            <p>Hợp tác - Đối ngoại</p>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="nav__mobile-link">
+                            <p>eNEU</p>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </label>
+            <div class="grid">
+                <div class="grid__row">
+                    <ul class="app__nav-list">
+                        <li class="app__nav-item"><a href="./Gioi-thieu.html" class="app__nav-item-link">GIỚI THIỆU</a>
+                            <ul class="app__nav-subnav">
+                                <li class="app__nav-subnav-item"><a href="./Gioi-thieu.html">Tổng quan</a></li>
+                                <li class="app__nav-subnav-item"><a href="./Gioi-thieu.html">Cơ cấu tổ chức</a></li>
+                                <li class="app__nav-subnav-item"><a href="./Gioi-thieu.html">Media</a></li>
+                            </ul>
+                        </li>
+                        <li class="app__nav-item"><a href="./tintuc-sukien.html" class="app__nav-item-link">TIN TỨC</a>
+                            <ul class="app__nav-subnav">
+                                <li class="app__nav-subnav-item"><a href="./tintuc-sukien.html">Hoạt động chung</a></li>
+                                <li class="app__nav-subnav-item"><a href="./tintuc-sukien.html">Công tác Đảng và Đoàn thể</a></li>
+                                <li class="app__nav-subnav-item"><a href="./tintuc-sukien.html">Tuyển sinh - Đào tạo - Công tác sinh
+                                        viên</a></li>
+                                <li class="app__nav-subnav-item"><a href="./tintuc-sukien.html">Tổ chức - Nhân sự</a></li>
+                                <li class="app__nav-subnav-item"><a href="./tintuc-sukien.html">Kiểm định - Xếp hạng</a></li>
+                            </ul>
+                        </li>
+                        <li class="app__nav-item"><a href="./tintuc-sukien.html" class="app__nav-item-link">SỰ KIỆN NỔI
+                                BẬT</a>
+                            <ul class="app__nav-subnav">
+                                <li class="app__nav-subnav-item"><a href="./tintuc-sukien.html">Thông báo chung</a></li>
+                                <li class="app__nav-subnav-item"><a href="./tintuc-sukien.html">Hợp tác đối ngoại - Truyền thông</a></li>
+                                <li class="app__nav-subnav-item"><a href="./tintuc-sukien.html">Tuyển sinh - Đào tạo - Công tác sinh
+                                        viên</a></li>
+                                <li class="app__nav-subnav-item"><a href="./tintuc-sukien.html">Tổ chức - Nhân sự - Tuyển dụng</a></li>
+                                <li class="app__nav-subnav-item"><a href="./tintuc-sukien.html">Kiểm định - Xếp hạng</a></li>
+                                <li class="app__nav-subnav-item"><a href="./tintuc-sukien.html">Sự kiện sắp diễn ra</a></li>
+                            </ul>
+                        </li>
+                        <li class="app__nav-item"><a href="./admissions.html" class="app__nav-item-link">TUYỂN SINH</a>
+                            <ul class="app__nav-subnav">
+                                <li class="app__nav-subnav-item"><a href="./admissions.html">Đại học</a></li>
+                                <li class="app__nav-subnav-item"><a href="./admissions.html">Cao học</a></li>
+                                <li class="app__nav-subnav-item"><a href="./admissions.html">Nghiên cứu sinh</a></li>
+                                <li class="app__nav-subnav-item"><a href="./admissions.html">Thạc sĩ</a></li>
+                                <li class="app__nav-subnav-item"><a href="./admissions.html">Tiến sĩ</a></li>
+                            </ul>
+                        </li>
+                        <li class="app__nav-item"><a href="./Chuong-trinh-dao-tao.html" class="app__nav-item-link">ĐÀO
+                                TẠO</a>
+                            <ul class="app__nav-subnav">
+                                <li class="app__nav-subnav-item"><a href="./Chuong-trinh-dao-tao.html">Chính quy</a></li>
+                                <li class="app__nav-subnav-item"><a href="./Chuong-trinh-dao-tao.html">Tiên tiến chất lượng cao</a></li>
+                                <li class="app__nav-subnav-item"><a href="./Chuong-trinh-dao-tao.html">Hệ quốc tế</a></li>
+                                <li class="app__nav-subnav-item"><a href="./Chuong-trinh-dao-tao.html">Vừa học vừa làm</a></li>
+                                <li class="app__nav-subnav-item"><a href="./Chuong-trinh-dao-tao.html">Đào tạo từ xa</a></li>
+                                <li class="app__nav-subnav-item"><a href="./Chuong-trinh-dao-tao.html">Văn bằng 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="app__nav-item"><a href="./sinh-vien.html" class="app__nav-item-link">SINH VIÊN</a>
+                            <ul class="app__nav-subnav">
+                                <li class="app__nav-subnav-item"><a href="./sinh-vien.html">Nghiên cứu - Sáng tạo - Khởi nghiệp</a></li>
+                                <li class="app__nav-subnav-item"><a href="./sinh-vien.html">Học bổng</a></li>
+                                <li class="app__nav-subnav-item"><a href="./sinh-vien.html">Học phí</a></li>
+                                <li class="app__nav-subnav-item"><a href="./sinh-vien.html">Hỗ trợ đời sống</a></li>
+                                <li class="app__nav-subnav-item"><a href="./sinh-vien.html">Hướng nghiệp</a></li>
+                                <li class="app__nav-subnav-item"><a href="./sinh-vien.html">Việc làm</a></li>
+                                <li class="app__nav-subnav-item"><a href="./sinh-vien.html">Đoàn thanh niên</a></li>
+                                <li class="app__nav-subnav-item"><a href="./sinh-vien.html">Hội sinh viên</a></li>
+                                <li class="app__nav-subnav-item"><a href="./sinh-vien.html">Câu lạc bộ sinh viên</a></li>
+                                <li class="app__nav-subnav-item"><a href="./sinh-vien.html">Cựu sinh viên</a></li>
+                            </ul>
+                        </li>
+                        <li class="app__nav-item"><a href="./nghien-cuu-va-hop-tac-doi-ngoai.html"
+                                class="app__nav-item-link">NGHIÊN CỨU</a>
+                            <ul class="app__nav-subnav">
+                                <li class="app__nav-subnav-item"><a href="./nghien-cuu-va-hop-tac-doi-ngoai.html">Thông tin ứng viên GS/PGS</a></li>
+                                <li class="app__nav-subnav-item"><a href="./nghien-cuu-va-hop-tac-doi-ngoai.html">Hoạt động nghiên cứu khoa học và sáng
+                                        tạo</a></li>
+                                <li class="app__nav-subnav-item"><a href="./nghien-cuu-va-hop-tac-doi-ngoai.html">Các đơn vị nghiên cứu</a></li>
+                                <li class="app__nav-subnav-item"><a href="./nghien-cuu-va-hop-tac-doi-ngoai.html">Tạp chí</a></li>
+                            </ul>
+                        </li>
+                        <li class="app__nav-item"><a href="./nghien-cuu-va-hop-tac-doi-ngoai.html"
+                                class="app__nav-item-link">HỢP TÁC ĐỐI NGOẠI</a>
+                            <ul class="app__nav-subnav">
+                                <li class="app__nav-subnav-item"><a href="./sinh-vien.html">Tin tức - Học bổng</a></li>
+                                <li class="app__nav-subnav-item"><a href="./nghien-cuu-va-hop-tac-doi-ngoai.html">Mạng lưới đối tác</a></li>
+                                <li class="app__nav-subnav-item"><a href="./nghien-cuu-va-hop-tac-doi-ngoai.html">Hoạt động hợp tác</a></li>
+                            </ul>
+                        </li>
+                        <li class="app__nav-item"><a href="./index.html" class="app__nav-item-link">eNEU</a></li>
+                        <li class="app__nav-item"><a href="./lienhe.html" class="app__nav-item-link">Liên hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- banner -->
+        <div class="app_banner">
+            <img src="./assets/img/banner4v3.jpg">
+            <div id="app_banner-title">
+                <span id="app_banner-title-link">
+                    <a href="index.html">Trang chủ </a>
+                    <span> / </span>
+                    <a href="Gioi-thieu.html"> Giới thiệu trường NEU</a>
+                </span>
+                <div id="app_banner-title-name">Giới thiệu trường Đại học Kinh tế Quốc dân</div>
+            </div>
+        </div>
+
+        <!-- Rightside bar of social media links-->
+        <div class="side_social_link">
+            <div id="share_icon">
+                <img src="./assets/img/share.png" alt="">
+            </div>
+            <div style="margin-top: 20px; font-size:15px;writing-mode: vertical-rl;
+            text-orientation: mixed; margin-left:15px;margin-bottom:70px;font-weight:bold;color:red;">FOLLOW
+                -----------------</div>
+            <div id="social_media_icons">
+                <img src="./assets/img/linkedin.png" alt="social media icons">
+                <img src="./assets/img/youtube.png" alt="social media icons">
+                <img src="./assets/img/instagram.png" alt="social media icons">
+                <img src="./assets/img/facebook.png" alt="social media icons">
+                <img src="./assets/img/twitter.png" alt="social media icons">
+            </div>
+        </div>
+
+        <div class="app_letter-container">
+            <!-- Leftside menu -->
+            <div class="app_menu">
+                <div class="app-menu-item col-md-8" id="app-menu-item-first"><a role="button" id="GioiThieuLink">GIỚI
+                        THIỆU VỀ TRƯỜNG KINH TẾ QUỐC DÂN</a></div>
+                <div class="app-menu-item col-md-8"><a role="button" id="SuMenhLink">SỨ MỆNH & GIÁ TRỊ CỐT LÕI</a></div>
+                <div class="app-menu-item col-md-8"><a role="button" id="ThanhTuuLink">THÀNH TỰU</a></div>
+                <div class="app-menu-item col-md-8"><a role="button" id="HoiDongTruongLink">HỘI ĐỒNG TRƯỜNG</a></div>
+                <div class="app-menu-item col-md-8"><a role="button" id="KhoiNganhLink">CÁC KHỐI NGÀNH</a></div>
+                <div class="app-menu-item col-md-8"><a role="button" id="GiangVienLink">ĐỘI NGŨ GIẢNG VIÊN</a></div>
+            </div>
+
+            <!-- Thư ngỏ -->
+            <div class="app_letter">
+                <div class="app_letter-main">
+                    <div id="GioiThieu">
+                        <h1 class="app_letter-main-title">GIỚI THIỆU VỀ ĐẠI HỌC KINH TẾ QUỐC DÂN</h1>
+                        <h1 style="font-size: 55px;text-align:center;color:var(--primary-color);margin-bottom:5%;">BAN GIÁM HIỆU</h1>
+                        <div class="app_letter-main-pic">
+                            <div id="app_letter-main-principal" class="d-flex">
+                                <div class="app_letter-main-principal-card">
+                                    <img style="object-fit: cover;width:100%;height:320px;" src="https://congdoan.neu.edu.vn/uploads/data/2027/Images/News/Thumb_z7517320862947-914b59682699274bcb42834cb4425965-2048x1479.jpg" alt="">
+                                    <div class="principal-profile d-flex flex-row">
+                                        <div style="height: 100%;width:30%;">
+                                            <img class="app_letter-neu-logo" src="./assets/img/Logo-NEU.png" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column" style="width:70%;height:100%;">
+                                            <p>NGƯT.PGS.TS Bùi Huy Nhượng</p>
+                                            <p>GIÁM ĐỐC ĐẠI HỌC </p>
+                                        </div>
+                                    </div>
+                                    <div class="principal-cardInfo">
+                                        <img class="app_letter-neu-logo" src="./assets/img/Logo-NEU.png" alt="">
+                                        <h3 style="margin-left: 10%;margin-top:5%;margin-right:10%;">NGƯT.PGS.TS Bùi Huy Nhượng<br>là Giám đốc hiện tại của <br>Đại học Kinh tế Quốc dân (NEU)</h3>
+                                    </div>
+                                </div>
+                                <div class="app_letter-main-principal-card">
+                                    <img style="object-fit: cover;width:100%;height:320px;" src="./assets/img/image 24.png" alt="">
+                                    <div class="principal-profile d-flex flex-row">
+                                        <div style="height: 100%;width:30%;">
+                                            <img class="app_letter-neu-logo" src="./assets/img/Logo-NEU.png" alt="">
+                                        </div>
+                                        <div class="d-flex flex-column" style="width:70%;height:100%;">
+                                            <p>GS.TS Nguyễn Thành Hiếu</p>
+                                            <p>PHÓ GIÁM ĐỐC ĐẠI HỌC</p>
+                                        </div>
+                                    </div>
+                                    <div class="principal-cardInfo">
+                                        <img class="app_letter-neu-logo" src="./assets/img/Logo-NEU.png" alt="">
+                                        <h3 style="margin-left: 10%;margin-top:5%;margin-right:10%;">NGƯT.GS.TS Nguyễn Thành Hiếu<br>là Phó Giám đốc hiện tại của <br>Đại học Kinh tế Quốc dân (NEU)
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p style="margin-top: 5%;">Trường đại học Kinh tế quốc dân có tên tiếng Anh là National
+                            Economics University (viết tắt là NEU). Trường hiện đang có vị trí nằm tại 207 Giải Phóng,
+                            Đồng Tâm, Quận Hai Bà Trưng, Hà Nội.</p>
+                        <p>
+                            Trường được thành lập vào tháng 1 năm 1956 với tên ban đầu là Trường Kinh tế Tài chính. Sau
+                            nhiều lần thay tên thì đến Tháng 10 năm 1985, Trường chính thức có tên là Đại học Kinh tế
+                            Quốc dân và giữ nguyên cho đến hiện tại.</p>
+                        <p>
+                            Trải qua hơn 65 năm xây dựng và phát triển, Trường Đại học Kinh tế Quốc dân luôn luôn giữ
+                            vững vị trí là:</p>
+                        <p>
+                            - Một trong những trung tâm đào tạo và bồi dưỡng cán bộ quản lý kinh tế và quản trị kinh
+                            doanh lớn nhất ở Việt Nam.</p>
+                        <p>
+                            Trường Đại học Kinh tế Quốc dân đã đào tạo được nhiều thế hệ cán bộ quản lý chính quy, năng
+                            động, dễ thích nghi với nền kinh tế thị trường và có khả năng tiếp thu các công nghệ mới.
+                            Trong số những sinh viên tốt nghiệp của Trường, nhiều người hiện đang giữ những chức vụ quan
+                            trọng trong các cơ quan của Đảng, Quốc hội, Chính phủ và các doanh nghiệp.</p>
+                        <p>
+                            - Trung tâm nghiên cứu khoa học kinh tế phục vụ đào tạo, hoạch định chính sách kinh tế - xã
+                            hội của Đảng, Nhà nước, các ngành, các địa phương và chiến lược kinh doanh của các doanh
+                            nghiệp. Trường đã triển khai nhiều công trình nghiên cứu lớn về kinh tế và kinh doanh ở Việt
+                            Nam, được Chính phủ trực tiếp giao nhiều đề tài nghiên cứu lớn và quan trọng. Ngoài ra,
+                            Trường cũng hợp tác về nghiên cứu với nhiều trường đại học, viện nghiên cứu và các tổ chức
+                            quốc tế.</p>
+                        <p>
+                            - Trung tâm tư vấn và chuyển giao công nghệ quản lý kinh tế và quản trị kinh doanh. Trường
+                            đã có nhiều đúng góp to lớn trong việc tư vấn cho các tổ chức ở Trung ương, địa phương và
+                            các doanh nghiệp. Ảnh hưởng sâu rộng của Trường Đại học Kinh tế Quốc dân đến toàn bộ công
+                            cuộc đổi mới được tăng cường bởi các mối liên kết chặt chẽ của Trường với các cơ quan thực
+                            tiễn.</p>
+                        <p>
+                            Trường Đại học Kinh tế Quốc dân có quan hệ trao đổi, hợp tác nghiên cứu - đào tạo với nhiều
+                            trường đại học, viện nghiên cứu nổi tiếng của các nước như: Liên bang Nga, Trung Quốc,
+                            Bungari, Ba Lan, Sec và Slovakia, Anh, Pháp, Mỹ, Úc, Nhật, Thuỵ Điển, Hà Lan, Đức, Canada,
+                            Hàn Quốc, Thái Lan...</p>
+                        <p>
+                            Trường cũng hợp tác chặt chẽ với các tổ chức quốc tế như SIDA (Thuỵ Điển), UNFPA, CIDA
+                            (Canada), JICA (Nhật Bản), Chính phủ Hà Lan, ODA (Vương quốc Anh), UNDP, Ngân hàng Thế giới,
+                            Quỹ Ford (Mỹ), Quỹ Hanns Seidel (Đức)...</p>
+                        <p>
+                            Đến năm 2030, Trường Đại học Kinh tế Quốc dân trở thành đại học tự chủ toàn diện, đi tiên
+                            phong trong chuyển đổi số, có hệ thống quản trị hiện đại, thông minh và chuyên nghiệp, có vị
+                            trí cao trong các bảng xếp hạng quốc tế.</p>
+                    </div>
+
+                    <div id="SuMenh">
+                        <h1 class="app_letter-main-title">SỨ MỆNH & GIÁ TRỊ CỐT LÕI</h1>
+                        <p>Về phần sứ mệnh và giá trị cốt lõi, Đại học Kinh Tế Quốc Dân luôn Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat. Duis aepturi sint occaecati cupiditate non provident, similique
+                            sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+                        <p style="font-size: 20px;font-weight:bold;"><i class="fa-solid fa-star"
+                                style="padding-right: 20px;"></i>Sứ mệnh</p>
+                        <p>- Tiên phong trong đổi mới, phát triển và phổ biến tri thức về kinh tế, quản lý và quản trị
+                            kinh doanh; thu hút và đào tạo nhân tài; cung cấp nguồn nhân lực chất lượng cao, phụng sự sự
+                            nghiệp phát triển bền vững của đất nước.</p>
+                        <p>- Đào tạo ra các nhà lãnh đạo và những doanh nhân hàng đầu của Việt Nam.</p>
+                        <p>- Trung tâm nghiên cứu xuất sắc, đề xuất xây dựng đường lối, chính sách phát triển kinh tế -
+                            xã hội của đất nước và tư vấn giải pháp cho các địa phương, tổ chức, doanh nghiệp.</p>
+                        <p style="font-size: 20px;font-weight:bold;"><i class="fa-solid fa-star"
+                                style="padding-right: 20px;"></i>Tầm nhìn</p>
+                        <p>- Đại học theo định hướng nghiên cứu, đa ngành, đa lĩnh vực, thuộc nhóm 5 đại học hàng đầu
+                            của Việt Nam.</p>
+
+                        <p>- Top 100 trường đại học tốt nhất châu Á trong lĩnh vực kinh tế, quản lý và quản trị kinh
+                            doanh theo chuẩn mực xếp hạng quốc tế.</p>
+                        <p style="font-size: 20px;font-weight:bold;"><i class="fa-solid fa-star"
+                                style="padding-right: 20px;"></i>Giá trị cốt lõi</p>
+
+                        <p>- Sáng tạo. Xây dựng môi trường học tập và nghiên cứu thân thiện, đảm bảo cho viên chức,
+                            người lao động, sinh viên, học viên, nghiên cứu sinh được tự do sáng tạo, phát triển tư duy;
+                            tôn trọng ý kiến phản biện khách quan, có cơ sở khoa học; giữ vững và phát huy vai trò đi
+                            đầu trong đổi mới và sáng tạo, tạo dựng bản sắc riêng.</p>
+
+                        <p>- Đoàn kết. Tập thể sư phạm Trường là một khối thống nhất, đồng tâm nhất trí vì sự phát
+                            triển; sẵn sàng hợp tác, chia sẻ nguồn lực, hỗ trợ và giúp đỡ lẫn nhau để hoàn thành tốt mọi
+                            nhiệm vụ. Mạng lưới cựu sinh viên, học viên và các đối tác luôn là một phần gắn bó chặt chẽ
+                            của Trường.</p>
+
+                        <p>- Liêm chính. Tôn trọng sự trung thực, công bằng, minh bạch trong tất cả các hoạt động đào
+                            tạo, nghiên cứu và quản trị đại học; công khai, thực hiện nghiêm túc những cam kết đối với
+                            người học, viên chức, người lao động, cộng đồng và xã hội.</p>
+
+                        <p>- Hiệu quả. Hướng tới nâng cao chất lượng, hiệu quả tối ưu nhằm đảm bảo sử dụng tốt nhất và
+                            bền vững các nguồn lực; tầm nhìn dài hạn được chú trọng để đảm bảo sự phát triển liên tục.
+                        </p>
+
+                        <p>- Trách nhiệm. Suy nghĩ và hành động với tinh thần trách nhiệm cao, hết mình vì sự nghiệp
+                            chung; lợi ích của mỗi cá nhân gắn liền với sự phát triển của Trường.</p>
+                    </div>
+
+                    <div id="ThanhTuu">
+                        <h1 class="app_letter-main-title">THÀNH TỰU</h1>
+                        <p>
+                            Trường Đại học Kinh tế Quốc dân đã đạt được nhiều thành tựu to lớn và được trao tặng nhiều
+                            danh hiệu cao quý của Đảng và Nhà nước:</p>
+                        <p class="app_letter-medalPara" style="margin-top: 5%;"><i class="fa-solid fa-star"
+                                style="padding-right: 20px;"></i>
+                            HUÂN CHƯƠNG HỒ CHÍ MINH
+                            Năm 2001, 2011 <i class="fa-solid fa-star" style="padding-left: 20px;"></i></p>
+                        <p class="app_letter-medalPara"><i class="fa-solid fa-star" style="padding-right: 20px;"></i>
+                            ANH HÙNG LAO ĐỘNG
+                            Năm 2000<i class="fa-solid fa-star" style="padding-left: 20px;"></i></p>
+                        <p class="app_letter-medalPara"><i class="fa-solid fa-star" style="padding-right: 20px;"></i>
+                            HUÂN CHƯƠNG ĐỘC LẬP
+                            Hạng Nhất (1996), Hạng Nhì (1991), Hạng Ba (1986)<i class="fa-solid fa-star"
+                                style="padding-left: 20px;"></i></p>
+                        <p class="app_letter-medalPara"><i class="fa-solid fa-star" style="padding-right: 20px;"></i>
+                            HUÂN CHƯƠNG LAO ĐỘNG
+                            Hạng Nhất (1983, 2016), Hạng Nhì (1978), Hạng Ba (1961-1972)<i class="fa-solid fa-star"
+                                style="padding-left: 20px;"></i></p>
+                        <p class="app_letter-medalPara"><i class="fa-solid fa-star" style="padding-right: 20px;"></i>
+                            HUY CHƯƠNG HỮU NGHỊ
+                            Nước Cộng hòa dân chủ nhân dân Lào (1987, 2008)<i class="fa-solid fa-star"
+                                style="padding-left: 20px;"></i></p>
+                    </div>
+
+                    <div id="HoiDongTruong">
+                        <h1 class="app_letter-main-title">HỘI ĐỒNG TRƯỜNG</h1>
+
+                        <table class="principal-table">
+                            <tbody>
+                                <tr style="height: 120px;">
+                                    <td colspan="4" align="center">
+                                        <p id="principal-table-title" style="text-align: center; margin-bottom:5%;">
+                                            <strong>DANH SÁCH THÀNH VIÊN HỘI ĐỒNG TRƯỜNG<br>
+                                                TRƯỜNG ĐẠI HỌC KINH TẾ QUỐC DÂN NHIỆM KỲ 2021 - 2026</strong>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td id="principal-table-cards-firstCard" class="principal-table-cards" colspan="2"
+                                        align="center"><img alt=""
+                                            src="assets/img/PGS_TS_bui_Duc_Tho.jpg"
+                                            style="text-align: center;">
+                                        <br>
+                                        PGS.TS Bùi Đức Thọ
+                                        <br>
+                                        Bí thư Đảng uỷ, Chủ tịch Hội đồng trường
+                                    </td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td class="principal-table-cards" align="center"><img alt=""
+                                            style="text-align: center; "
+                                            src="assets/img/image 23.jpg">
+                                        <br>
+                                        PGS.TS Bùi Huy Nhượng
+                                        <br>
+                                        Giám đốc Đại học
+                                    </td>
+                                    <td class="principal-table-cards" align="center"><img alt=""
+                                            src="assets/img/Hoang-Van-Cuong.jpeg"
+                                            style="text-align: center; ">
+                                        <br>
+                                        GS.TS Hoàng Văn Cường
+                                        <br>
+                                        GCVV Khoa BĐS&KTTN
+                                    </td>
+                                    <td class="principal-table-cards" align="center"><img alt=""
+                                            src="assets/img/image 24.png"
+                                            style="text-align: center; ">
+                                        <br>
+                                        PGS.TS Nguyễn Thành Hiếu
+                                        <br>
+                                        Phó Giám đốc
+                                    </td>
+                                </tr>
+                                <tr class="showMore-members">
+                                    <td class="principal-table-cards" align="center"><img alt=""
+                                            src="assets/img/Nguyen-Huu-Dong.jpg"
+                                            style="text-align: center; ">
+                                        <br>
+                                        TS. Nguyễn Hữu Đồng
+                                        <br>
+                                        Chủ tịch Công đoàn ĐH, CVP Đảng - Đoàn thể
+                                    </td>
+                                    <td class="principal-table-cards" align="center"><img alt=""
+                                            src="assets/img/nguyen-huu-anh.jpg">
+                                        <br>
+                                        GS.TS Nguyễn Hữu Ánh
+                                        <br>
+                                        Viện trưởng Viện Kế toán - Kiểm toán
+                                    </td>
+                                    <td class="principal-table-cards" align="center"><img alt=""
+                                            src="assets/img/ho-dinh-bao.jpg"
+                                            style="text-align: center; ">
+                                        <br>
+                                        PGS.TS Hồ Đình Bảo
+                                        <br>
+                                        Trưởng phòng TCCB
+                                    </td>
+                                    <td class="principal-table-cards" align="center"><img alt=""
+                                            src="assets/img/do thi hai ha.jpg"
+                                            style="text-align: center; "><br>
+                                        PGS.TS Đỗ Thị Hải Hà
+                                        <br>
+                                        Hiệu trưởng Trường Kinh tế và Quản lý công  
+                                    </td>
+                                </tr>
+                                <tr class="showMore-members">
+                                    <td class="principal-table-cards" align="center"><img alt=""
+                                            src="assets/img/tran thi van hoa.jpg"
+                                            style="text-align: center; "><br>
+                                        GS.TS Trần Thị Vân Hoa
+                                        <br>
+                                        Giảng viên Cao cấp, Khoa Khoa học quản lý
+                                    </td>
+                                    <td class="principal-table-cards" align="center"><img alt=""
+                                            src="assets/img/Lợi HT_ KD -1.jpg"
+                                            style="text-align: center; ">
+                                        <br>
+                                        PGS.TS Tạ Văn Lợi
+                                        <br>
+                                        Hiệu trưởng Trường Kinh doanh 
+                                    </td>
+                                    <td class="principal-table-cards" align="center"><img alt=""
+                                            src="assets/img/vu van ngoc.jpg"
+                                            style="text-align: center; "><br>
+                                        TS. Vũ Văn Ngọc
+                                        <br>
+                                        Viện trưởng Viện Đào tạo TT, CLC &amp; POHE
+                                    </td>
+                                    <td class="principal-table-cards" align="center"><img alt=""
+                                            src="assets/img/hoang xuan que.jpg"
+                                            style="text-align: center; "><br>
+                                        PGS.TS Hoàng Xuân Quế
+                                        <br>
+                                        Viện trưởng Viện Ngân hàng - Tài chính
+                                    </td>
+                                </tr>
+                                <tr class="showMore-members">
+                                    <td class="principal-table-cards" align="center"><img alt=""
+                                            src="assets/img/le trung thanh.jpg"
+                                            style="text-align: center; ">
+                                        <br>
+                                        PGS.TS Lê Trung Thành
+                                        <br>
+                                        Viện trưởng Viện Đào tạo Quốc tế
+                                    </td>
+                                    <td class="principal-table-cards" align="center"><img alt=""
+                                            src="assets/img/to trung thanh.jpg"
+                                            style="text-align: center; ">
+                                        <br>
+                                        GS.TS Tô Trung Thành
+                                        <br>
+                                        Trưởng phòng Phòng Quản lý khoa học
+                                    </td>
+                                    <td class="principal-table-cards" align="center"><img alt=""
+                                            src="assets/img/vu huy thong.jpg"><br>
+                                        PGS.TS Vũ Huy Thông
+                                        <br>
+                                        Trưởng khoa Khoa Marketing
+                                    </td>
+                                    <td class="principal-table-cards" align="center"><img alt=""
+                                            src="assets/img/dang quoc chinh.jpg">
+                                        <br>
+                                        TS Đặng Quốc Chính
+                                        <br>
+                                        Tổng Giám đốc CTCP Cơ điện Trần Phú
+                                    </td>
+                                </tr>
+                                <tr class="showMore-members">
+                                    <td class="principal-table-cards" align="center"><img alt=""
+                                            src="assets/img/phan minh chinh.jpg"
+                                            style="text-align: center; "><br>
+                                        Ông Phan Minh Chính
+                                        <br>
+                                        Chủ tịch HĐQT CTCP Thời trang thể thao chuyên nghiệp Giao Thuỷ
+                                    </td>
+                                    <td class="principal-table-cards" align="center"><img alt=""
+                                            src="assets/img/nguyen anh dung.jpg"
+                                            style="text-align: center; "><br>
+                                        PGS.TS Nguyễn Anh Dũng
+                                        <br>
+                                        Vụ phó Vụ Giáo dục Đại học, Bộ GD&amp;ĐT
+                                    </td>
+                                    <td class="principal-table-cards" align="center"><img alt=""
+                                            src="assets/img/Nguyen Thai Dung BRG.jpeg"
+                                            style="text-align: center; "><br>
+                                        Ông Nguyễn Thái Dũng
+                                        <br>
+                                        Tổng Giám đốc Công ty TNHH Bán lẻ BRG
+                                    </td>
+                                    <td class="principal-table-cards" align="center"><img alt=""
+                                            src="assets/img/nguyen duc hien.jpg"
+                                            style="text-align: center; "><br>
+                                        Ông Nguyễn Đức Hiển
+                                        <br>
+                                        Phó Trưởng ban Kinh tế Trung ương
+                                    </td>
+                                </tr>
+                                <tr class="showMore-members">
+                                    <td class="principal-table-cards" align="center"><img alt=""
+                                            src="assets/img/ho sy hung.jpg"><br>
+                                        Ông Hồ Sỹ Hùng
+                                        <br>
+                                        Phó Chủ tịch UB Quản lý vốn Nhà nước tại doanh nghiệp
+                                    </td>
+                                    <td class="principal-table-cards" align="center"><img alt=""
+                                            src="assets/img/nguyen dinh thang.jpg">
+                                        <br>
+                                        Ông Nguyễn Đình Thắng
+                                        <br>
+                                        Chủ tịch HĐTV, Công ty TNHH Dịch vụ Kỹ thuật Du lịch Đầu tư phát triển HASTEC
+                                    </td>
+                                    <td class="principal-table-cards" align="center"><img alt=""
+                                            src="assets/img/nguyen-anh-tuan (1).jpeg"
+                                            style="text-align: center; "><br>
+                                        Ông Nguyễn Anh Tuấn
+                                        <br>
+                                        Bí thư Tỉnh uỷ Bắc Ninh
+                                    </td>
+                                    <td class="principal-table-cards" align="center">
+                                        <img alt=""
+                                            src="assets/img/HoangNgocMai.jpg"
+                                            style="text-align: center; ">
+                                        <br>
+                                        Sinh viên Hoàng Ngọc Mai
+                                        <br>
+                                        UV Ban Chấp hành Đoàn trường
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button id="showMore-members-button"><a>Xem thêm thành viên</a></button>
+                    </div>
+
+                    <div id="KhoiNganh">
+                        <h1 class="app_letter-main-title">CÁC KHỐI NGÀNH</h1>
+                        <p>
+                            Trường Đại học Kinh tế Quốc dân (NEU) là một trong những trường đại học hàng đầu tại Việt
+                            Nam, nổi tiếng với các chương trình đào tạo chất lượng và đa dạng. NEU cung cấp một loạt các
+                            khối ngành phong phú, phản ánh sự đa dạng và sâu rộng của nền kinh tế và xã hội hiện
+                            đại.<br><br> Các khối ngành của NEU bao gồm Kinh tế - Quản trị kinh doanh, Tài chính - Ngân
+                            hàng, Quản lý công, Khoa học xã hội và Nhân văn, Luật, và Công nghệ thông tin. Từ việc hiểu
+                            biết về quy luật kinh tế đến ứng dụng công nghệ thông tin trong quản lý và kinh doanh, NEU
+                            cung cấp một môi trường học tập đa chiều và phong phú cho sinh viên, giúp họ phát triển
+                            những kỹ năng và kiến thức cần thiết để thành công trong môi trường làm việc toàn cầu.
+                        </p>
+                        <button id="showIndustryUnits">Xem các đơn vị khối ngành</button>
+
+                    </div>
+
+                    <div id="GiangVien">
+                        <h1 class="app_letter-main-title">ĐỘI NGŨ GIẢNG VIÊN</h1>
+
+                        <p style="margin-bottom: 5%;">Đội ngũ các giảng viên, nha khoa học đạt trình độ chuyên nghiệp và
+                            có tâm huyết với nghề 17 Giáo sư, 112 phó Giáo sư, 186 tiến sĩ, 524 thạc sĩ và có nhiều
+                            giảng viên được Nhà nước phong tặng danh hiệu Nhà giáo ưu tú. Trong vấn đề nghiên cứu khoa
+                            học, giảng viên của trường đã có được hàng ngàn bài báo khoa học đăng tạp chí bao gồm các
+                            chương trình, đề tài các cấp.</p>
+
+                        <div id="app_letter-lecturers" class="d-flex">
+                            <div class="app_letter-lecturers-card">
+                                <img style="object-fit: cover;width:100%;"
+                                    src="https://neu.edu.vn/Resources/Images/SubDomain/HomePage/2019/2019_02/2019_02_25%20Bo%20nhiem%20vien%20chuc%20quan%20l%C3%BD/DSC_3027%20(Copy).JPG"
+                                    alt="">
+                                <div class="principal-cardInfo" style="overflow: scroll;">
+                                    <img class="app_letter-neu-logo" src="./assets/img/Logo-NEU.png" alt="">
+                                    <h3 style="margin-left: 10%;margin-top:5%;margin-right:10%;">Đội ngũ giảng viên
+                                        trường NEU là một tập thể tài năng, tâm huyết và giàu kinh nghiệm. Với trình độ
+                                        chuyên môn cao, nhiều Giáo sư, Tiến sĩ đầu ngành, các giảng viên luôn cập nhật
+                                        kiến thức mới nhất và truyền đạt cho sinh viên một cách sinh động, hiệu
+                                        quả.<br><br>
+
+                                        Họ không chỉ giảng dạy kiến thức chuyên môn mà còn rèn luyện kỹ năng thực hành
+                                        và phẩm chất đạo đức cho sinh viên, giúp sinh viên trở thành những nhân lực chất
+                                        lượng cao đáp ứng nhu cầu của xã hội.</h3>
+                                </div>
+                            </div>
+                            <div class="app_letter-lecturers-card">
+                                <img style="object-fit: cover;width:100%;"
+                                    src="https://phongtruyenthong.neu.edu.vn/Resources/Images/SubDomain/phongtruyenthong/2021/DSC_7020%20(Copy)%20(1).jpeg"
+                                    alt="">
+                                <div class="principal-cardInfo" style="overflow: scroll;">
+                                    <img class="app_letter-neu-logo" src="./assets/img/Logo-NEU.png" alt="">
+                                    <h3 style="margin-left: 10%;margin-top:5%;margin-right:10%;">Đội ngũ giảng viên NEU
+                                        là nguồn cảm hứng cho sinh viên trên con đường học tập và rèn luyện. Họ luôn
+                                        nhiệt tình, tận tâm và sẵn sàng hỗ trợ sinh viên trong mọi hoàn cảnh. Nhiều
+                                        giảng viên còn là những nhà nghiên cứu khoa học uy tín, có nhiều đóng góp cho sự
+                                        phát triển của khoa học và xã hội.<br><br>
+
+                                        Với sự cống hiến của đội ngũ giảng viên, NEU đã đào tạo thành công hàng chục
+                                        nghìn cử nhân, thạc sĩ, tiến sĩ có chất lượng cao, đang đóng góp cho sự phát
+                                        triển của đất nước.</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Visit our major study location -->
+        <div class="app_visit">
+            <div class="app_visit-background">
+                <img src="./assets/img/backgroundmajor.png" alt="">
+            </div>
+            <div class="app_visit-block d-flex">
+                <div class="app_visit-block-title">
+                    <h2>Visit our major study locations</h2>
+                </div>
+                <div class="app_visit-block-content">
+                    <h3>NEU has three campuses and two sites in Australia, two campuses in Vietnam and a research and
+                        industry collaboration centre in Spain.</h3>
+                </div>
+                <div class="app_visit-block-button">
+                    <h3><i class="fa-solid fa-play" style="align-content: center; padding-right: 15px;"></i>
+                        Discover</h3>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Why choose NEU -->
+        <div class="app_Reason">
+            <div class="app_Reason-title">
+                <h2>TẠI SAO NÊN HỌC TẠI NEU?</h2>
+            </div>
+            <div class="app_Reason-content">
+                <h3>Learn more about what makes NEU a renowned global university of technology, design, and enterprise.
+                </h3>
+            </div>
+            <div class="app_Reason-grid" id="app_Reason-grid">
+                <div class="app_Reason-grid-row">
+                    <div class="app_Reason-block">
+                        <div class="app_Reason-block-img">
+                            <img src="./assets/img/RMIT_Culture.png" alt="">
+                        </div>
+                        <div class="app_Reason-block-title">
+                            <h3>NEU Culture</h3>
+                        </div>
+                        <div class="app_Reason-block-content">
+                            <p>Our local and international campuses feature award-winning buildings and some of the most
+                                technologically advanced facilities in the world.</p>
+                        </div>
+                        <div class="app_Reason-block-comment">
+                            <p>Enjoy our cultural experiences</p>
+                        </div>
+                    </div>
+                    <div class="app_Reason-block">
+                        <div class="app_Reason-block-img">
+                            <img src="./assets/img/FactsFigures.png" alt="">
+                        </div>
+                        <div class="app_Reason-block-title">
+                            <h3>Facts, Figures & Rankings</h3>
+                        </div>
+                        <div class="app_Reason-block-content">
+                            <p>At NEU, teaching, research, and engagement are central to making an impact and creating
+                                life-changing experiences for our students.</p>
+                        </div>
+                        <div class="app_Reason-block-comment">
+                            <p>See how we stack up</p>
+                        </div>
+                    </div>
+                    <div class="app_Reason-block">
+                        <div class="app_Reason-block-img">
+                            <img src="./assets/img/whychooseNEU3.png" alt="">
+                        </div>
+                        <div class="app_Reason-block-title">
+                            <h3>Locations and facilities</h3>
+                        </div>
+                        <div class="app_Reason-block-content">
+                            <p>Our local and international campuses feature award-winning buildings and some of the most
+                                technologically advanced facilities in the world.</p>
+                        </div>
+                        <div class="app_Reason-block-comment">
+                            <p>Explore our facilities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- register for admission -->
+        <div class="app_register">
+            <div class="app_register-grid">
+                <div class="app_register-grid-row">
+                    <div class="app_register-title">
+                        <h2>ĐĂNG KÝ XÉT TUYỂN VÀO ĐẠI HỌC KINH TẾ QUỐC DÂN</h2>
+                    </div>
+                    <div class="app_register-block">
+                        <div class="app_register-block-part1">
+                            <img src="./assets/img/img-admission.png" alt="">
+                        </div>
+                        <div class="app_register-block-part2">
+                            <div class="app_register-block-part2-title">
+                                <h3>Trở thành tân sinh viên NEU</h3>
+                            </div>
+                            <div class="app_register-block-part2-content">
+                                <h3>Đội ngũ cán bộ giảng viên NEU luôn nỗ lực thực hiện mọi mục tiêu, và chúng tôi luôn
+                                    tìm kiếm những ứng viên có thể tạo khác biệt.</h3>
+                            </div>
+                            <div class="app_register-block-part2-button">
+                                <h3><i class="fa-solid fa-play" style="padding-right: 20px;"></i>
+                                    Tìm hiểu thêm</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- industry units -->
+        <div class="app_industryUnits" id="app_industryUnits">
+            <div class="app_industryUnits-title">
+                <h2>CÁC ĐƠN VỊ KHỐI NGÀNH</h2>
+            </div>
+            <div class="app_industryUnits-grid">
+                <div class="app_industryUnits-grid-row">
+
+                    <div class="app_industryUnits-block">
+                        <div class="app_industryUnits-block-part1">
+                            <img src="./assets/img/AEP.png" alt="">
+                        </div>
+                        <div class="app_industryUnits-block-part2">
+                            <h3>Viện Đào tạo tiên tiến chất lượng cao</h3>
+                        </div>
+                        <div class="app_industryUnits-triangle"></div>
+                    </div>
+
+                    <div class="app_industryUnits-block">
+                        <div class="app_industryUnits-block-part1">
+                            <img style="margin-top:10%;margin-left:15%;width: 70%;height:60%;"
+                                src="./assets/img/viện phát triển bền vững.png" alt="">
+                        </div>
+                        <div class="app_industryUnits-block-part2">
+                            <h3>Viện phát triển bền vững</h3>
+                        </div>
+                        <div class="app_industryUnits-triangle"></div>
+                    </div>
+                    <div class="app_industryUnits-block">
+                        <div class="app_industryUnits-block-part1">
+                            <img src="./assets/img/viện kế kiểm.png" alt="">
+                        </div>
+                        <div class="app_industryUnits-block-part2">
+                            <h3>Viện Kế toán - Kiểm toán</h3>
+                        </div>
+                        <div class="app_industryUnits-triangle"></div>
+                    </div>
+                    <div class="app_industryUnits-block">
+                        <div class="app_industryUnits-block-part1">
+                            <img src="./assets/img/truongkd.png" alt="">
+                        </div>
+                        <div class="app_industryUnits-block-part2">
+                            <h3>Trường Kinh doanh</h3>
+                        </div>
+                        <div class="app_industryUnits-triangle"></div>
+                    </div>
+                    <div class="app_industryUnits-block">
+                        <div class="app_industryUnits-block-part1">
+                            <img src="./assets/img/ISME.png" alt="">
+                        </div>
+                        <div class="app_industryUnits-block-part2">
+                            <h3>Viện Đào tạo quốc tế</h3>
+                        </div>
+                        <div class="app_industryUnits-triangle"></div>
+                    </div>
+                    <div class="app_industryUnits-block">
+                        <div class="app_industryUnits-block-part1">
+                            <img src="./assets/img/cepm.png" alt="">
+                        </div>
+                        <div class="app_industryUnits-block-part2">
+                            <h3>Trường Kinh tế và Quản lý công</h3>
+                        </div>
+                        <div class="app_industryUnits-triangle"></div>
+                    </div>
+                    <div class="app_industryUnits-block">
+                        <div class="app_industryUnits-block-part1">
+                            <img src="./assets/img/GSNEU.png" alt="">
+                        </div>
+                        <div class="app_industryUnits-block-part2">
+                            <h3>Viện đào tạo sau đại học</h3>
+                        </div>
+                        <div class="app_industryUnits-triangle"></div>
+                    </div>
+                    <div class="app_industryUnits-block">
+                        <div class="app_industryUnits-block-part1">
+                            <img src="./assets/img/nct.png" alt="">
+                        </div>
+                        <div class="app_industryUnits-block-part2">
+                            <h3>Trường Công nghệ</h3>
+                        </div>
+                        <div class="app_industryUnits-triangle"></div>
+                    </div>
+                    <div class="app_industryUnits-block">
+                        <div class="app_industryUnits-block-part1">
+                            <img src="./assets/img/SBF.png" alt="">
+                        </div>
+                        <div class="app_industryUnits-block-part2">
+                            <h3>Viện Ngân hàng Tài chính</h3>
+                        </div>
+                        <div class="app_industryUnits-triangle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Button scroll to top -->
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top"><span style="font-size: 12px;"
+            class="ti-angle-double-up"></span></button>
+
+    <footer class="footer">
+        <div style="height: 100%; width: 100%">
+            <div id="footer_container">
+                <div id="footer_info" class="col-md-4 col-sm-12">
+                    <h1>PHÒNG QUẢN LÝ ĐÀO TẠO</h1>
+                    <img style="height: 70px;width:70px;" src="./assets/img/Logo-NEU.png">
+                    <h2 style="margin-top: 5%;" class="footer_info_schoolName">NATIONAL ECONOMICS</h2>
+                    <h2 style="margin-bottom: 10%;" class="footer_info_schoolName">UNIVERSITY</h2>
+                    <h3 style="margin-bottom: 5%;">ĐỊA CHỈ</h3>
+                    <h4>Phòng 210 - 211 - 213 TẦNG 2 - NHÀ A1 </h4>
+                    <h4 style="margin-bottom: 5%;">Trường Đại học Kinh tế Quốc dân</h4>
+                    <h4>207 Giải Phòng, Đồng Tâm, </h4>
+                    <h4>Quận Hai Bà Trưng, </h4>
+                    <h4>Hà Nội, Việt Nam</h4>
+                </div>
+                <div id="footer_quote" class="col-md-4 col-sm-12">
+                    <img style="height:30px;margin-bottom:5%;" src="./assets/img/quote-left.png">
+                    <h2 style="margin-bottom: 3%;">Đổi mới, hội nhập, phát triển.</h2>
+                    <h2>Kết nối tri thức - Vững bước</h2>
+                    <h2 style="margin-bottom: 5%;">tương lai.</h2>
+                    <h4><i>Đại học Kinh tế Quốc dân</i></h4>
+                    <h4><i>est. 1956.</i></h4>
+                </div>
+                <div id="footer_contact" class="col-md-4 col-sm-12">
+                    <h3>LIÊN HỆ</h3>
+                    <h4>Điện thoại: 0243 6280 280 / Máy lẻ: 5222</h4>
+                    <h4>Mạng xã hội: facebook.com/tvtsneu</h4>
+                    <h4 style="margin-bottom: 10%;">Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d9a9b1a8b5bdad99b7bcacf7bcbdacf7afb7">[email&#160;protected]</a></h4>
+                    <h3>ĐÀO TẠO</h3>
+                    <h4>Cổng nhập học trực tuyến</h4>
+                    <h4>Tuyển sinh 2025</h4>
+                    <h4>Neu Future</h4>
+                </div>
+            </div>
+            <div id="bot-socialLinks">
+                <div id="bot-social_media_icons" align="center">
+                    <img src="./assets/img/linkedin.png" alt="social media icons">
+                    <img src="./assets/img/youtube.png" alt="social media icons">
+                    <img src="./assets/img/instagram.png" alt="social media icons">
+                    <img src="./assets/img/facebook.png" alt="social media icons">
+                    <img src="./assets/img/twitter.png" alt="social media icons">
+                </div>
+            </div>
+            <div id="footer_copyright">
+                <h4>Copyright 2025© - Group 2 - Web design</h4>
+            </div>
+        </div>
+    </footer>
+
+   
+    <!-- stick navbar and scroll to top button -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            var header = document.querySelector('.header');
+            var navigation = document.querySelector('.app__nav');
+            // var sticky = header.offsetTop;
+            var sticky = 160;
+
+            if (window.pageYOffset > sticky) {
+                navigation.classList.add("scrolled");
+            } else {
+                navigation.classList.remove("scrolled");
+            }
+
+            // <!-- Button scroll to top -->
+            if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+                document.getElementById("scrollToTopBtn").style.display = "block";
+            } else {
+                document.getElementById("scrollToTopBtn").style.display = "none";
+            }
+        }
+
+        function scrollToTop() {
+            document.body.scrollTop = 0; // Dành cho Safari
+            document.documentElement.scrollTop = 0; //Dành cho Chrome, Firefox, IE với Opera
+        }
+
+    </script>
+
+    <!-- reveal function -->
+    <script>
+        window.addEventListener('scroll', reveal)
+
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal')
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight
+                var revealTop = reveals[i].getBoundingClientRect().top
+                console.log(revealTop);
+                var viewPoint = 150
+
+                if (revealTop < windowHeight - viewPoint) {
+                    reveals[i].classList.add('active')
+                } else {
+                    reveals[i].classList.remove('active')
+                }
+            }
+        }
+    </script>
+
+    <script src="./assets/js/Gioi-thieu.js"></script>
+    <script src="

@@ -1,0 +1,370 @@
+/* leftside menu */
+.app_menu{
+    position: sticky;
+    float: left;
+    top: 0;
+    height: 100vh;
+    width: 20%;
+    margin-left: 5%;
+    background-color: rgb(205, 230, 255);
+}
+.app-menu-item{
+    margin-top: 10%;
+    margin-left: 20%;
+}
+.app-menu-item a{
+    margin-right: 10%;
+    transition: color 0.3s ease;
+}
+
+@media screen and (min-width:960px) {
+    .app-menu-item a{
+        font-size: 18px;
+    }
+    #app-menu-item-first{
+        margin-top: 40%;
+    }
+}
+@media screen and (max-width:959px) {
+    .app-menu-item a{
+        font-size: 8px;
+    }
+    .app-menu-item{
+        margin-top: 20%;
+    }
+    #app-menu-item-first{
+        margin-top: 90%;
+    }
+}
+/* Frame set */
+.app_letter-container{
+    width: 100%;
+    height: 100%;
+}
+/* First part of the page (letter? idk) */
+.app_letter{
+    width: 65%;
+    margin-left: 30%;
+    margin-right: 5%;
+    flex-direction: row;
+}
+
+.app_letter-main-title{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 5%;
+    padding-top: 5%;
+}
+
+#app_letter-main-principal{
+    flex-direction: row;
+}
+.app_letter-lecturers-card{
+    margin-left: 5%;
+    margin-bottom: 5%;
+    width: 90%;
+    position: relative;
+}
+.app_letter-main-principal-card{
+    margin-left: 5%;
+    margin-bottom: 5%;
+    width: 42.5%;
+    position: relative;
+}
+
+.principal-profile{
+    position: absolute;
+    bottom: 0;
+    height: 20%;
+    width: 100%;
+    color: white;
+    background-color: rgba(66, 120, 255, 0.8);
+}
+.principal-profile p{
+    font-weight:bold;
+    margin: 8% 0px 0px 0px;
+}
+
+.principal-cardInfo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.351);
+    height: 0;
+    width: 100%;
+    transition: height 0.5s ease, background-color 0.5s ease;
+}
+@media screen and (min-width:960px) {
+    .principal-cardInfo{
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width:960px) {
+    .principal-cardInfo{
+        overflow: scroll;
+    }
+}
+.principal-cardInfo *{
+    opacity: 0;
+    text-align: justify;
+    transition: opacity 0.6s ease;
+}
+.app_letter-main-principal-card:hover .principal-cardInfo {
+    height: 100%;
+    border: 1px solid blue;
+    background-color: white;
+}
+.app_letter-main-principal-card:hover .principal-cardInfo *{
+    opacity: 1;
+}
+.app_letter-lecturers-card:hover .principal-cardInfo {
+    height: 100%;
+    border: 1px solid blue;
+    background-color: white;
+}
+.app_letter-lecturers-card:hover .principal-cardInfo *{
+    opacity: 1;
+}
+.app_letter p:not(.app_letter-medalPara, .principal-profile p){
+    font-size: var(--text-size);
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify;
+}
+.app_letter-medalPara{
+    font-size: var(--text-size);
+    margin-bottom: 50px;
+    font-weight: 500;
+    text-align: center;
+}
+.principal-table{
+    text-align: center;
+    width: 100%;
+}
+.principal-table tr{
+    height: 320px;
+}
+.principal-table-cards{
+    width: 20%;
+    font-size: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.principal-table-cards img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+@media screen and (min-width:960px) {
+    .app_letter-neu-logo{
+        height: 60px;
+        width:60px;
+        margin-left:10%;
+        margin-top:10%;
+    }
+}
+
+@media screen and (max-width:960px) {
+    .app_letter-neu-logo{
+        height: 30px;
+        width:30px;
+        margin-left:10%;
+        margin-top:10%;
+    }
+    #principal-table-title{
+        font-size: 12px;
+    }
+}
+
+#showMore-members-button{
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    background: linear-gradient(to left, #fff 50%, #0065ca 50%) right;
+    background-size: 200%;
+    transition: all .3s ease-out;
+    width: 180px;
+    height: 45px;
+    border: 2px solid rgb(0, 128, 255);
+    color: var(--primary-color);
+    border-radius: 30px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: bold;
+}
+#showMore-members-button:hover, #showIndustryUnits:hover{
+    background-position: left;
+    cursor: pointer;
+    color: white;
+}
+.showMore-members{
+    position: relative;
+    transition: showMembers 1s ease;
+}
+
+.showMore-members-hidden{
+    display: none;
+}
+#showIndustryUnits{
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    background: linear-gradient(to left, #fff 50%, #0065ca 50%) right;
+    background-size: 200%;
+    transition: all .3s ease-out;
+    height: 45px;
+    border: 2px solid rgb(0, 128, 255);
+    color: var(--primary-color);
+    border-radius: 30px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: bold;
+}
+
+@keyframes showMembers {
+    from{
+        transform: translateY(150px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes hideMembers {
+    from{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to{
+        transform: translateY(150px);
+        opacity: 0;
+    }
+}
+
+@media screen and (min-width:960px) {
+    .app_letter-main-pic{
+        width: 100%;
+        flex-direction: row;
+    }
+    #app_letter-main-principal{
+        flex-direction: row;
+        width: 100%;
+    }
+    #principal-table-cards-firstCard img{
+        width: 190px;
+    }
+    #app_letter-lecturers{
+        flex-direction: column;
+        width: 100%;
+    }
+    .principal-profile p{
+        font-size: 1.7rem;
+    }
+    .principal-cardInfo h3{
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width:960px) {
+    .principal-profile p{
+        font-size: 1.2rem;
+    }
+    #app_letter-main-principal,#app_letter-lecturers{
+        flex-direction: column;
+        width: 100%;
+    }
+    .app_letter-main-principal-card{
+        width: 100%;
+    }
+    .principal-cardInfo h3{
+        font-size: 12px;
+    }
+    #principal-table-cards-firstCard{
+        margin-left: -100%;
+    }
+    .principal-table-cards{
+        width: 180%;
+        display: block;
+        padding-bottom: 20px;
+    }
+    .app_letter-medalPara i{
+        display: none;
+    }
+    #showMore-members-button{
+        width: 120px;
+        font-size: 10px;
+    }
+    #showIndustryUnits{
+        font-size: 10px;
+    }
+    .app_letter-main-title{
+        font-size: 14px
+    }
+    #GiangVien p, #GioiThieu p, #SuMenh p, 
+    #ThanhTuu p, #HoiDong p, #KhoiNganh p{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:1280px) {
+    .principal-profile p{
+        font-size: 1.2rem;
+    }
+    .principal-cardInfo h3{
+        font-size: 14px;
+    }
+}
+
+
+/* banner */
+.app_banner{
+    position: relative;
+}
+.app_banner img{
+    width: 100%;
+    z-index: -1;
+}
+#app_banner-title{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background: linear-gradient(180deg, transparent, black);
+}
+#app_banner-title-link{
+    margin-left: 10%;
+}
+#app_banner-title-link a, span{
+    font-size: 25px;
+    text-decoration: none;
+    opacity: 1;
+    color: white;
+}
+@media screen and (max-width:1536px){
+    #app_banner-title-name{
+        font-size: 50px;
+    }
+}
+@media screen and (max-width:800px) {
+    #app_banner-title-link a, span{
+        font-size: 17px;
+    }
+    #app_banner-title-name{
+        font-size: 20px;
+    }
+}
+#app_banner-title-link a:hover{
+    opacity: 0.7;
+}
+#app_banner-title-name{
+    color: white;
+    font-weight: bold;
+    margin-left: 10%;
+    margin-bottom: 5%;
+}

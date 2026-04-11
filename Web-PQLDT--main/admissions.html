@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tuyển sinh</title>
+  <link rel="icon" href="./assets/img/Logo-NEU.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.5.1-web/fontawesome-free-6.5.1-web/css/all.min.css">
+  <link rel="stylesheet" href="./assets/fonts/themify-icons-font/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/footer-things.css">
+  <link rel="stylesheet" href="./assets/css/app_events.css">
+  <link rel="stylesheet" href="./assets/css/app__branch.css">
+  <link rel="stylesheet" href="./assets/css/app_daotao-sinhvien.css">
+  <link rel="stylesheet" href="./assets/css/admissions.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div class="app">
+    <!-- header -->
+    <header class="header">
+      <div class="grid">
+        <div class="grid__row">
+          <!-- header-left -->
+          <div class="header-left">
+            <div class="header-left__logo">
+              <img src="./assets/img/Logo-NEU.png" alt="">
+            </div>
+            <div class="header-left__name">
+              <span class="header-left__vietnamese-name">ĐẠI HỌC KINH TẾ QUỐC DÂN</span>
+              <span class="header-left__english-name">PHÒNG QUẢN LÝ ĐÀO TẠO</span>
+            </div>
+          </div>
+
+          <!-- header with search -->
+          <div class="header-with-search">
+            <div class="header__search">
+              <div class="header__search-input-wrap">
+                <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm">
+
+                <!-- search history -->
+                <div class="header__search-history">
+                  <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                  <ul class="header__search-history-list">
+                    <li class="header__search-history-item">
+                      <a href="">Học công nghệ thông tin ở NEU dễ có người yêu không?</a>
+                    </li>
+                    <li class="header__search-history-item">
+                      <a href="">Cách làm chủ môn thiết kế web trong 1 đêm?</a>
+                    </li>
+                    <li class="header__search-history-item">
+                      <a href="">Làm sao để học ít mà vẫn có học bổng...</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <button class="header__search-btn">
+                <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+
+
+
+          </div>
+
+          <!-- header with flags -->
+          <div class="header__search-flags">
+            <img src="./assets/img/vietnam-flag.webp" alt="">
+            <img src="./assets/img/britainflag.png" alt="">
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- navigation bar -->
+    <div class="app__nav">
+      <label for="nav-mobile-input" class="app__nav-bars-btn">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+
+      <input hidden type="checkbox" class="app__nav-input" id="nav-mobile-input">
+
+      <label for="nav-mobile-input" class="app__nav-overlay"></label>
+      <label for="nav-mobile-input" class="app__nav-mobile">
+        <label class="app__nav-mobile-close" for="nav-mobile-input">
+          <i class="fa-solid fa-xmark"></i>
+        </label>
+        <ul class="nav__mobile-list">
+          <li>
+            <a href="./Gioi-thieu.html" class="nav__mobile-link">
+              <p>giới thiệu</p>
+              <i class="fa-solid fa-chevron-right"></i>
+            </a>
+          </li>
+          <li>
+            <a href="./tintuc-sukien.html" class="nav__mobile-link">
+              <p>Tin tức</p>
+              <i class="fa-solid fa-chevron-right"></i>
+            </a>
+          </li>
+          <li>
+            <a href="./tintuc-sukien.html" class="nav__mobile-link">
+              <p>Sự kiện nổi bật</p>
+              <i class="fa-solid fa-chevron-right"></i>
+            </a>
+          </li>
+          <li>
+            <a href="./admissions.html" class="nav__mobile-link">
+              <p>Tuyển sinh</p>
+              <i class="fa-solid fa-chevron-right"></i>
+            </a>
+          </li>
+          <li>
+            <a href="./Chuong-trinh-dao-tao.html" class="nav__mobile-link">
+              <p>Đào tạo</p>
+              <i class="fa-solid fa-chevron-right"></i>
+            </a>
+          </li>
+          <li>
+            <a href="./sinh-vien.html" class="nav__mobile-link">
+              <p>Sinh viên</p>
+              <i class="fa-solid fa-chevron-right"></i>
+            </a>
+          </li>
+          <li>
+            <a href="./nghien-cuu-va-hop-tac-doi-ngoai.html" class="nav__mobile-link">
+              <p>Nghiên cứu</p>
+              <i class="fa-solid fa-chevron-right"></i>
+            </a>
+          </li>
+          <li>
+            <a href="./nghien-cuu-va-hop-tac-doi-ngoai.html" class="nav__mobile-link">
+              <p>Hợp tác - Đối ngoại</p>
+              <i class="fa-solid fa-chevron-right"></i>
+            </a>
+          </li>
+          <li>
+            <a href="" class="nav__mobile-link">
+              <p>eNEU</p>
+              <i class="fa-solid fa-chevron-right"></i>
+            </a>
+          </li>
+        </ul>
+      </label>
+      <div class="grid">
+        <div class="grid__row">
+          <ul class="app__nav-list">
+            <li class="app__nav-item"><a href="./Gioi-thieu.html" class="app__nav-item-link">GIỚI THIỆU</a>
+              <ul class="app__nav-subnav">
+                <li class="app__nav-subnav-item"><a href="">Tổng quan</a></li>
+                <li class="app__nav-subnav-item"><a href="">Cơ cấu tổ chức</a></li>
+                <li class="app__nav-subnav-item"><a href="">Media</a></li>
+              </ul>
+            </li>
+            <li class="app__nav-item"><a href="./tintuc-sukien.html" class="app__nav-item-link">TIN TỨC</a>
+              <ul class="app__nav-subnav">
+                <li class="app__nav-subnav-item"><a href="">Hoạt động chung</a></li>
+                <li class="app__nav-subnav-item"><a href="">Công tác Đảng và Đoàn thể</a></li>
+                <li class="app__nav-subnav-item"><a href="">Tuyển sinh - Đào tạo - Công tác sinh
+                    viên</a></li>
+                <li class="app__nav-subnav-item"><a href="">Tổ chức - Nhân sự</a></li>
+                <li class="app__nav-subnav-item"><a href="">Kiểm định - Xếp hạng</a></li>
+              </ul>
+            </li>
+            <li class="app__nav-item"><a href="./tintuc-sukien.html" class="app__nav-item-link">SỰ KIỆN NỔI BẬT</a>
+              <ul class="app__nav-subnav">
+                <li class="app__nav-subnav-item"><a href="">Thông báo chung</a></li>
+                <li class="app__nav-subnav-item"><a href="">Hợp tác đối ngoại - Truyền thông</a></li>
+                <li class="app__nav-subnav-item"><a href="">Tuyển sinh - Đào tạo - Công tác sinh
+                    viên</a></li>
+                <li class="app__nav-subnav-item"><a href="">Tổ chức - Nhân sự - Tuyển dụng</a></li>
+                <li class="app__nav-subnav-item"><a href="">Kiểm định - Xếp hạng</a></li>
+                <li class="app__nav-subnav-item"><a href="">Sự kiện sắp diễn ra</a></li>
+              </ul>
+            </li>
+            <li class="app__nav-item"><a href="./admissions.html" class="app__nav-item-link">TUYỂN SINH</a>
+              <ul class="app__nav-subnav">
+                <li class="app__nav-subnav-item"><a href="">Đại học</a></li>
+                <li class="app__nav-subnav-item"><a href="">Cao học</a></li>
+                <li class="app__nav-subnav-item"><a href="">Nghiên cứu sinh</a></li>
+                <li class="app__nav-subnav-item"><a href="">Thạc sĩ</a></li>
+                <li class="app__nav-subnav-item"><a href="">Tiến sĩ</a></li>
+              </ul>
+            </li>
+            <li class="app__nav-item"><a href="./Chuong-trinh-dao-tao.html" class="app__nav-item-link">ĐÀO TẠO</a>
+              <ul class="app__nav-subnav">
+                <li class="app__nav-subnav-item"><a href="">Chính quy</a></li>
+                <li class="app__nav-subnav-item"><a href="">Tiên tiến chất lượng cao</a></li>
+                <li class="app__nav-subnav-item"><a href="">Hệ quốc tế</a></li>
+                <li class="app__nav-subnav-item"><a href="">Vừa học vừa làm</a></li>
+                <li class="app__nav-subnav-item"><a href="">Đào tạo từ xa</a></li>
+                <li class="app__nav-subnav-item"><a href="">Văn bằng 2</a></li>
+              </ul>
+            </li>
+            <li class="app__nav-item"><a href="./sinh-vien.html" class="app__nav-item-link">SINH VIÊN</a>
+              <ul class="app__nav-subnav">
+                <li class="app__nav-subnav-item"><a href="">Nghiên cứu - Sáng tạo - Khởi nghiệp</a></li>
+                <li class="app__nav-subnav-item"><a href="">Học bổng</a></li>
+                <li class="app__nav-subnav-item"><a href="">Học phí</a></li>
+                <li class="app__nav-subnav-item"><a href="">Hỗ trợ đời sống</a></li>
+                <li class="app__nav-subnav-item"><a href="">Hướng nghiệp</a></li>
+                <li class="app__nav-subnav-item"><a href="">Việc làm</a></li>
+                <li class="app__nav-subnav-item"><a href="">Đoàn thanh niên</a></li>
+                <li class="app__nav-subnav-item"><a href="">Hội sinh viên</a></li>
+                <li class="app__nav-subnav-item"><a href="">Câu lạc bộ sinh viên</a></li>
+                <li class="app__nav-subnav-item"><a href="">Cựu sinh viên</a></li>
+              </ul>
+            </li>
+            <li class="app__nav-item"><a href="./nghien-cuu-va-hop-tac-doi-ngoai.html" class="app__nav-item-link">NGHIÊN
+                CỨU</a>
+              <ul class="app__nav-subnav">
+                <li class="app__nav-subnav-item"><a href="">Thông tin ứng viên GS/PGS</a></li>
+                <li class="app__nav-subnav-item"><a href="">Hoạt động nghiên cứu khoa học và sáng
+                    tạo</a></li>
+                <li class="app__nav-subnav-item"><a href="">Các đơn vị nghiên cứu</a></li>
+                <li class="app__nav-subnav-item"><a href="">Tạp chí</a></li>
+              </ul>
+            </li>
+            <li class="app__nav-item"><a href="./nghien-cuu-va-hop-tac-doi-ngoai.html" class="app__nav-item-link">HỢP
+                TÁC ĐỐI NGOẠI</a>
+              <ul class="app__nav-subnav">
+                <li class="app__nav-subnav-item"><a href="">Tin tức - Học bổng</a></li>
+                <li class="app__nav-subnav-item"><a href="">Mạng lưới đối tác</a></li>
+                <li class="app__nav-subnav-item"><a href="">Hoạt động hợp tác</a></li>
+              </ul>
+            </li>
+            <li class="app__nav-item"><a href="./index.html" class="app__nav-item-link">eNEU</a></li>
+            <li class="app__nav-item"><a href="./lienhe.html" class="app__nav-item-link">Liên hệ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- banner -->
+    <div class="app__admissions-banner">
+      <div class="app__admissions-banner-background" style="background-image: url(./assets/img/TuyenSinh.png);">
+      </div>
+      <div class="app__admissions-banner-box">
+        <div class="app__app__admissions-banner">
+          <h5>
+            <a href="./index.html">Trang chủ</a>
+          </h5>
+          <h5>/</h5>
+          <h5>
+            <a href="#">Tuyển sinh</a>
+          </h5>
+        </div>
+        <div class="app__admissions-banner-title">
+          Tuyển Sinh
+        </div>
+        <div class="app__admissions-banner-content">
+          The real world thrives, demands and needs new ideas. Be ready for the real world.
+          <button class="app__btn" style="width: 150px">
+            <i class="fa-solid fa-play app__btn-icon"></i>
+            <span class="app__btn-title">Lịch sự kiện</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rightside bar of social media links-->
+    <div class="side_social_link">
+      <div id="share_icon">
+        <img src="./assets/img/share.png">
+      </div>
+      <div style="margin-top: 20px; font-size:15px;writing-mode: vertical-rl;
+          text-orientation: mixed; margin-left:15px;margin-bottom:70px;font-weight:bold;color:red;">FOLLOW
+        -----------------</div>
+      <div id="social_media_icons">
+        <img src="./assets/img/linkedin.png" alt="social media icons">
+        <img src="./assets/img/youtube.png" alt="social media icons">
+        <img src="./assets/img/instagram.png" alt="social media icons">
+        <img src="./assets/img/facebook.png" alt="social media icons">
+        <img src="./assets/img/twitter.png" alt="social media icons">
+      </div>
+    </div>
+
+    <!-- invest Yourself -->
+    <div class="app__admissions-invest-container">
+      <div class="grid">
+        <div class="grid__row app__admissions-invest">
+          <div class="app__admissions-invest-content">
+            <p class="app__admissions-invest-title">
+              Đầu tư cho thành công của bạn
+            </p>
+            <p class="app__admissions-invest-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque aliquam modi vel aliquid. Porro voluptatum delectus sequi vero. Architecto necessitatibus minus deleniti nesciunt ipsa quia neque quis consequatur quaerat? Eaque!
+            </p>
+            <button class="app__admissions-invest-learmore">
+              <i class="fa-solid fa-play app__admissions-learmore-icon"></i>
+              <span class="app__admissions-learmore-title">Tìm hiểu thêm</span>
+            </button>
+          </div>
+          <div class="app__admissions-invest-img">
+            <img src="./assets/img/investyourself.png" alt="" class="app__admissions-invest-pic">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sign up addmissions -->
+    <div class="app__admissions-signup-container">
+      <div class="grid">
+        <div class="app__admissions-signup-box">
+          <div class="app__admissions-signup-content">
+            <div class="app__admissions-signup-title">
+              Đăng ký xét tuyển vào Neu năm 2025
+            </div>
+            <div class="app__admissions-signup-content-inner">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis illo sit, quo at ipsam commodi quaerat ab aliquid id atque expedita eveniet. Minima expedita eos nemo itaque architecto ipsam. Repudiandae.
+              <a href="" class="app__admissions-signup-link">Explore the next steps</a>
+            </div>
+          </div>
+          <div class="app__admissions-signup-img">
+            <img src="./assets/img/Signup.png" alt="" class="app__admissions-signup-pic">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- learning journey -->
+    <div class="app__admissions-journey-container">
+      <div class="grid">
+        <div class="grid__row">
+          <div class="app__admissions-journey-img">
+            <img src="./assets/img/Hội trường A2.png" alt="" class="app__admissions-journey-pic">
+          </div>
+          <div class="app__admissions-journey-content">
+            <div class="app__admissions-journey-title">Bắt đầu hành trình học tập tại đại học </div>
+            <div class="app__admissions-journey-des">
+              Navigating the application process can differ for each student. Follow our guide to applying and discover
+              the requirements, deadlines, and essentials to kickstart your academic adventure at QUT. Let’s get started
+              –
+              prepare your application today.
+            </div>
+            <button class="app__btn" style="width: 200px;">
+              <i class="fa-solid fa-play app__btn-icon"></i>
+              <span class="app__btn-title">Lịch sự kiện</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- life in Neu -->
+    <div class="app__admissions-lifeInNeu-container">
+      <div class="grid">
+        <div class="app__admissions-lifeInNeu-title">
+          Cuộc sống tại Neu
+        </div>
+        <div class="app__admissions-lifeInNeu-desc">
+          Explore our campuses, find dedicated support and read stories from students across the globe.
+        </div>
+        <div class="app__admissions-lifeInNeu-list">
+          <div class="app__admissions-lifeInNeu-item-container">
+            <div class="app__admissions-lifeInNeu-item">
+              <div class="app__admissions-lifeInNeu-item-title">Giảng đường</div>
+              <div class="app__admissions-lifeInNeu-item-desc">
+                See where you will be studying by exploring our world-class
+                facilities and welcoming campuses with 360° videos and 3D tours.
+                <br>
+                <a href="" class="app__admissions-lifeInNeu-item-link">
+                  Check out your eligibility
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="app__admissions-lifeInNeu-item-container">
+            <div class="app__admissions-lifeInNeu-item">
+              <div class="app__admissions-lifeInNeu-item-title">Khu vực chung</div>
+              <div class="app__admissions-lifeInNeu-item-desc">
+                We want all our students to succeed and thrive at uni. As a QUT student, you will have access to
+                practical help, counselling, healthcare and more support when you need it.
+                <br>
+                <a href="" class="app__admissions-lifeInNeu-item-link">
+                  Learn about services available to you
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="app__admissions-lifeInNeu-item-container">
+            <div class="app__admissions-lifeInNeu-item">
+              <div class="app__admissions-lifeInNeu-item-title">Ký túc xá</div>
+              <div class="app__admissions-lifeInNeu-item-desc">
+                Learn about life and study at QUT through the lens of international students and their stories.
+                <br>
+                <a href="" class="app__admissions-lifeInNeu-item-link">
+                  Visit the International Insights blog
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- advise -->
+    <div class="app__admissions-advise-container">
+      <div class="grid">
+        <div class="grid__row">
+          <div class="app__admissions-advise-content">
+            <div class="app__admissions-advise-title">
+              Tư vấn lộ trình học phù hợp
+            </div>
+            <div class="app__admissions-advise-desc">
+              If you don't meet the entry requirements for your chosen course, or you just want to build your English
+              language skills, QUT College can help you become a confident English speaker, ready to study at NEU.
+            </div>
+            <button class="app__btn" style="width: 200px;">
+              <i class="fa-solid fa-play app__btn-icon"></i>
+              <span class="app__btn-title">Lịch sự kiện</span>
+            </button>
+          </div>
+          <div class="app__admissions-advise-img">
+            <img src="./assets/img/Tốt nghiệp.png" alt="" class="app__admissions-advise-pic">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- event -->
+    <div class="app__admissions-event-container">
+      <div class="grid">
+        <div class="app__admissions-event-title">
+          Sự kiện tuyển sinh
+        </div>
+        <div class="app__admissions-event-list">
+          <div class="app__admissions-event-item">
+            <div class="app__admissions-event-item-container">
+              <div class="app__admissions-event-img">
+                <img src="./assets/img/Event1.png" alt="" class="app__admissions-event-pic">
+                <div class="app__admissions-event-time">17 Tháng 8
+                </div>
+              </div>
+              <div class="app__admissions-event-content">
+                <div class="app__admissions-event-content-title">
+                  Buổi giới thiệu trường và ngành theo học tại trường NEU
+                </div>
+                <div class="app__admissions-event-content-where">Địa điểm: Hội trường A2</div>
+                <a href="" class="app__admissions-event-content-detail">Xem chi tiết</a>
+              </div>
+            </div>
+          </div>
+          <div class="app__admissions-event-item">
+            <div class="app__admissions-event-item-container">
+              <div class="app__admissions-event-img">
+                <img src="./assets/img/event 2.png" alt="" class="app__admissions-event-pic">
+                <div class="app__admissions-event-time">16 Tháng 8</div>
+              </div>
+              <div class="app__admissions-event-content">
+                <div class="app__admissions-event-content-title">
+                  Thông tin về hồ sơ đăng ký và quy trình tuyển sinh
+                </div>
+                <div class="app__admissions-event-content-where">Địa điểm: Cổng điện tử trường NEU</div>
+                <a href="" class="app__admissions-event-content-detail">Xem chi tiết</a>
+              </div>
+            </div>
+          </div>
+          <div class="app__admissions-event-item">
+            <div class="app__admissions-event-item-container">
+              <div class="app__admissions-event-img">
+                <img src="./assets/img/event 3.png" alt="" class="app__admissions-event-pic">
+                <div class="app__admissions-event-time">18 Tháng 8</div>
+              </div>
+              <div class="app__admissions-event-content">
+                <div class="app__admissions-event-content-title">
+                  Thông tin về kết quả tuyển sinh và cách thức nhập học
+                </div>
+                <div class="app__admissions-event-content-where">Địa điểm: Cổng điện tử trường NEU</div>
+                <a href="" class="app__admissions-event-content-detail">Xem chi tiết</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="app__admissions-event-learmore">
+          <button class="app__admissions-event-learmore-box">
+            <i class="fa-solid fa-play app__admissions-event-learmore-icon"></i>
+            <span class="app__admissions-event-learmore-title">Tìm hiểu thêm</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Button scroll to top -->
+  <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top"><span
+      class="ti-angle-double-up"></span></button>
+
+  <footer class="footer">
+    <div style="height: 100%; width: 100%">
+      <div id="footer_container">
+        <div id="footer_info" class="col-md-4 col-sm-12">
+          <h1>PHÒNG QUẢN LÝ ĐÀO TẠO</h1>
+          <img style="height: 70px;width:70px;" src="./assets/img/Logo-NEU.png">
+          <h2 style="margin-top: 5%;" class="footer_info_schoolName">NATIONAL ECONOMICS</h2>
+          <h2 style="margin-bottom: 10%;" class="footer_info_schoolName">UNIVERSITY</h2>
+          <h3 style="margin-bottom: 5%;">ĐỊA CHỈ</h3>
+          <h4>Phòng 210 - 211 - 213 TẦNG 2 - NHÀ A1 </h4>
+          <h4 style="margin-bottom: 5%;">Trường Đại học Kinh tế Quốc dân</h4>
+          <h4>207 Giải Phòng, Đồng Tâm, </h4>
+          <h4>Quận Hai Bà Trưng, </h4>
+          <h4>Hà Nội, Việt Nam</h4>
+        </div>
+        <div id="footer_quote" class="col-md-4 col-sm-12">
+          <img style="height:30px;margin-bottom:5%;" src="./assets/img/quote-left.png">
+          <h2 style="margin-bottom: 3%;">Đổi mới, hội nhập, phát triển.</h2>
+          <h2>Kết nối tri thức - Vững bước</h2>
+          <h2 style="margin-bottom: 5%;">tương lai.</h2>
+          <h4><i>Đại học Kinh tế Quốc dân</i></h4>
+          <h4><i>est. 1956.</i></h4>
+        </div>
+        <div id="footer_contact" class="col-md-4 col-sm-12">
+          <h3>LIÊN HỆ</h3>
+          <h4>Điện thoại: 0243 6280 280 / Máy lẻ: 5222</h4>
+          <h4>Mạng xã hội: facebook.com/tvtsneu</h4>
+          <h4 style="margin-bottom: 10%;">Email: phqldt@neu.edu.vn</h4>
+          <h3>ĐÀO TẠO</h3>
+          <h4>Cổng nhập học trực tuyến</h4>
+          <h4>Tuyển sinh 2025</h4>
+          <h4>Neu Future</h4>
+        </div>
+      </div>
+      <div id="bot-socialLinks">
+        <div id="bot-social_media_icons" align="center">
+          <img src="./assets/img/linkedin.png" alt="social media icons">
+          <img src="./assets/img/youtube.png" alt="social media icons">
+          <img src="./assets/img/instagram.png" alt="social media icons">
+          <img src="./assets/img/facebook.png" alt="social media icons">
+          <img src="./assets/img/twitter.png" alt="social media icons">
+        </div>
+      </div>
+      <div id="footer_copyright">
+        <h4>Copyright 2025© - Group 2 - Web design</h4>
+      </div>
+    </div>
+  </footer>
+
+  <!-- stick navbar and scroll to top button -->
+  <script>
+
+    window.onscroll = function () {
+      scrollFunction()
+    };
+
+    function scrollFunction() {
+      var header = document.querySelector('.header');
+      var navigation = document.querySelector('.app__nav');
+      // var sticky = header.offsetTop;
+      var sticky = 160;
+
+      if (window.pageYOffset > sticky) {
+        navigation.classList.add("scrolled");
+      } else {
+        navigation.classList.remove("scrolled");
+      }
+
+      // <!-- Button scroll to top -->
+      if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+        document.getElementById("scrollToTopBtn").style.display = "block";
+      } else {
+        document.getElementById("scrollToTopBtn").style.display = "none";
+      }
+    }
+
+    function scrollToTop() {
+      document.body.scrollTop = 0; // Dành cho Safari
+      document.documentElement.scrollTop = 0; //Dành cho Chrome, Firefox, IE với Opera
+    }
+
+  </script>
+
+  <!-- reveal function -->
+  <script>
+    window.addEventListener('scroll', reveal)
+
+    function reveal() {
+      var reveals = document.querySelectorAll('.reveal')
+
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight
+        var revealTop = reveals[i].getBoundingClientRect().top
+        console.log(revealTop);
+        var viewPoint = 150
+
+        if (revealTop < windowHeight - viewPoint) {
+          reveals[i].classList.add('active')
+        } else {
+          reveals[i].classList.remove('active')
+        }
+      }
+    }
+  </script>
+
+  <script src="./assets/js/respond.js"></script>
+  <script src="./assets/js/app_news.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

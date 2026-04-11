@@ -1,0 +1,537 @@
+/* ============================================================
+   APP EXTRAS CSS — app_extras.css
+   Bổ sung cho toàn bộ website NEU - Nhóm 2
+   Bao gồm: Dark Mode, Search Dropdown, Carousel Dots,
+            Form Validation, Dark Mode Toggle, Back-to-Top,
+            Google Maps, Scroll Animations
+   ============================================================ */
+
+/* ---- SMOOTH SCROLL TOÀN TRANG ---- */
+html { scroll-behavior: smooth; }
+
+/* ============================================================
+   DARK MODE TOGGLE BUTTON (góc phải dưới)
+   ============================================================ */
+#darkModeToggle {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 9999;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: background 0.3s, border-color 0.3s, transform 0.2s;
+    color: #333;
+}
+#darkModeToggle:hover {
+    transform: scale(1.12);
+    border-color: var(--primary-color, #0065ca);
+}
+.dm-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dm-icon.dm-moon { color: #1a1a2e; }
+.dm-icon.dm-sun  { color: #f5a623; }
+
+/* ============================================================
+   DARK MODE VARIABLES
+   ============================================================ */
+:root {
+    --dm-bg:      #121212;
+    --dm-bg2:     #1e1e1e;
+    --dm-bg3:     #2a2a2a;
+    --dm-text:    #e0e0e0;
+    --dm-text2:   #b0b0b0;
+    --dm-border:  #3a3a3a;
+    --dm-primary: #1e88e5;
+}
+
+html.dark-mode body {
+    background-color: var(--dm-bg) !important;
+    color: var(--dm-text) !important;
+}
+
+/* ---- HEADER ---- */
+html.dark-mode .header {
+    background-color: #0a1a2e !important;
+    border-bottom: 1px solid var(--dm-border);
+}
+html.dark-mode .header-left__vietnamese-name,
+html.dark-mode .header-left__english-name {
+    color: #e0e0e0 !important;
+}
+html.dark-mode .header__search {
+    background-color: var(--dm-bg3) !important;
+}
+html.dark-mode .header__search-input {
+    background-color: var(--dm-bg3) !important;
+    color: var(--dm-text) !important;
+}
+html.dark-mode .header__search-history {
+    background-color: var(--dm-bg2) !important;
+    border: 1px solid var(--dm-border) !important;
+}
+html.dark-mode .header__search-history-heading { color: #888 !important; }
+html.dark-mode .header__search-history-item a  { color: var(--dm-text) !important; }
+html.dark-mode .header__search-history-item:hover { background-color: var(--dm-bg3) !important; }
+
+/* ---- NAVIGATION ---- */
+html.dark-mode .app__nav {
+    background-color: #0d1b2a !important;
+    border-color: var(--dm-border) !important;
+}
+html.dark-mode .app__nav-item a,
+html.dark-mode .app__nav-item-link { color: #c8d8f0 !important; }
+html.dark-mode .app__nav-item > a:hover { color: #64b5f6 !important; }
+html.dark-mode .app__nav.scrolled { background-color: rgba(13,27,42,0.95) !important; }
+html.dark-mode .app__nav.scrolled .app__nav-item-link { color: #fff !important; }
+html.dark-mode .app__nav-subnav {
+    background-color: var(--dm-bg2) !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5) !important;
+    border: 1px solid var(--dm-border) !important;
+}
+html.dark-mode .app__nav-subnav-item a { color: var(--dm-text) !important; }
+html.dark-mode .app__nav-subnav-item:hover,
+html.dark-mode .app__nav-subnav-item:hover a {
+    background-color: var(--dm-primary) !important;
+    color: #fff !important;
+}
+html.dark-mode .app__nav-mobile { background-color: var(--dm-bg2) !important; }
+html.dark-mode .nav__mobile-link {
+    color: var(--dm-text) !important;
+    border-color: var(--dm-border) !important;
+}
+
+/* ---- TEXT CHUNG ---- */
+html.dark-mode h1, html.dark-mode h2, html.dark-mode h3,
+html.dark-mode h4, html.dark-mode h5, html.dark-mode h6 {
+    color: var(--dm-text) !important;
+}
+html.dark-mode p { color: var(--dm-text) !important; }
+html.dark-mode li { color: var(--dm-text) !important; }
+html.dark-mode a { color: #90caf9 !important; }
+html.dark-mode a:hover { color: #64b5f6 !important; }
+
+/* ---- TIN TỨC ---- */
+html.dark-mode #hot_news {
+    border-color: var(--dm-primary) !important;
+    background-color: var(--dm-bg2) !important;
+}
+html.dark-mode .news_card {
+    background-color: var(--dm-bg2) !important;
+    box-shadow: 0 0 5px var(--dm-primary) !important;
+}
+html.dark-mode .news_title { color: var(--dm-text) !important; }
+html.dark-mode .news_card:hover .news_title { color: #64b5f6 !important; }
+html.dark-mode .news_desc { color: var(--dm-text2) !important; }
+html.dark-mode #announce {
+    border-color: var(--dm-primary) !important;
+    background-color: var(--dm-bg2) !important;
+}
+html.dark-mode #announcement {
+    color: #64b5f6 !important;
+    border-color: var(--dm-primary) !important;
+}
+html.dark-mode .list-group-item {
+    background-color: var(--dm-bg2) !important;
+    color: var(--dm-text) !important;
+    border-color: var(--dm-border) !important;
+}
+html.dark-mode .announce_title { color: var(--dm-text) !important; }
+html.dark-mode .announce_title:hover { color: #64b5f6 !important; }
+html.dark-mode #poster { filter: brightness(0.85); }
+html.dark-mode .more a { color: var(--dm-text) !important; }
+html.dark-mode .more a:hover { color: #64b5f6 !important; }
+html.dark-mode .app_news { background-color: var(--dm-bg) !important; }
+html.dark-mode .news_container { color: var(--dm-text) !important; }
+
+/* ---- SỰ KIỆN ---- */
+html.dark-mode .app__events { background-color: #0a1628 !important; }
+html.dark-mode .app__events-item-content { background-color: var(--dm-bg2) !important; }
+html.dark-mode .app__events-item-title { color: #64b5f6 !important; }
+html.dark-mode .app__events-item-description { color: var(--dm-text) !important; }
+html.dark-mode .app__events-notifi-list { background-color: var(--dm-bg2) !important; }
+html.dark-mode .app__event-notifi-content { color: var(--dm-text) !important; }
+html.dark-mode .app__events-notifi-title { color: #64b5f6 !important; }
+
+/* ---- ĐÀO TẠO SINH VIÊN ---- */
+html.dark-mode .app__daotao-sinhvien { background-color: var(--dm-bg) !important; }
+html.dark-mode .app__daotao-sinhvien-item { background-color: var(--dm-bg2) !important; }
+html.dark-mode .app__daotao-sinhvien-poster { background-color: #1c2040 !important; }
+html.dark-mode .app__daotao-sinhvien-button h3 {
+    background-color: var(--dm-bg3) !important;
+    color: var(--dm-text) !important;
+}
+html.dark-mode .app__daotao-sinhvien-text h2 {
+    color: #64b5f6 !important;
+    border-color: #64b5f6 !important;
+}
+
+/* ---- LĨNH VỰC (BRANCH) ---- */
+html.dark-mode .app__branch { background-color: var(--dm-bg2) !important; }
+html.dark-mode .app__branch-body-container-card { background-color: var(--dm-bg3) !important; }
+html.dark-mode .app__branch-body-desc {
+    background-color: rgba(30,30,30,0.95) !important;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5) !important;
+}
+html.dark-mode .app__branch-body-desc-content { color: var(--dm-text) !important; }
+html.dark-mode .app__branch-body-content { background-color: #111 !important; }
+html.dark-mode .app__branch-header { color: var(--dm-text) !important; }
+html.dark-mode .app__branch-header-title { color: var(--dm-text) !important; }
+
+/* ---- NGHIÊN CỨU & HỢP TÁC ---- */
+html.dark-mode .app__nghiencuu-hoptac { background-color: var(--dm-bg) !important; }
+html.dark-mode .app__nghiencuu-hoptac-title span {
+    color: var(--dm-text) !important;
+    border-color: var(--dm-border) !important;
+}
+html.dark-mode .app__nghiencuu-hoptac-img-wrapper { background-color: rgba(0,0,0,0.7) !important; }
+html.dark-mode .app__nghiencuu-hoptac-content li { color: #fff !important; }
+html.dark-mode .app__nghiencuu-hoptac-description { color: var(--dm-text2) !important; }
+html.dark-mode .app__nghiencuu-hoptac-btn {
+    border-color: var(--dm-border) !important;
+    color: var(--dm-text) !important;
+}
+
+/* ---- TUYỂN SINH ---- */
+html.dark-mode .app__admissions-invest-container {
+    background-color: var(--dm-bg) !important;
+    border-color: var(--dm-border) !important;
+}
+html.dark-mode .app__admissions-invest-title { color: #64b5f6 !important; }
+html.dark-mode .app__admissions-invest-description { color: var(--dm-text) !important; }
+html.dark-mode .app__admissions-lifeInNeu-container { background-color: var(--dm-bg2) !important; }
+html.dark-mode .app__admissions-lifeInNeu-item-desc {
+    background-color: var(--dm-bg3) !important;
+    color: var(--dm-text) !important;
+}
+html.dark-mode .app__admissions-lifeInNeu-title { color: #64b5f6 !important; }
+html.dark-mode .app__admissions-event-container { background-color: var(--dm-bg2) !important; }
+html.dark-mode .app__admissions-event-content {
+    background-color: var(--dm-bg3) !important;
+}
+html.dark-mode .app__admissions-event-content-title { color: #64b5f6 !important; }
+html.dark-mode .app__admissions-event-content-where { color: var(--dm-text2) !important; }
+html.dark-mode .app__admissions-advise-title { color: #64b5f6 !important; }
+html.dark-mode .app__admissions-advise-desc  { color: var(--dm-text) !important; }
+html.dark-mode .app__admissions-signup-container { background-color: #0d1b2a !important; }
+html.dark-mode .app__admissions-journey-container { background-color: #0d2340 !important; }
+
+/* ---- CHƯƠNG TRÌNH ĐÀO TẠO ---- */
+html.dark-mode .app_overview-picContainer { background-color: var(--dm-bg2) !important; }
+html.dark-mode #app_overview-picContainer-para1,
+html.dark-mode #app_overview-picContainer-para2 { color: var(--dm-text) !important; }
+html.dark-mode .app_inducement { background-color: var(--dm-bg2) !important; }
+html.dark-mode .app_inducement-block {
+    background-color: var(--dm-bg3) !important;
+    border-color: var(--dm-border) !important;
+}
+html.dark-mode .app_inducement-block-percent { color: #64b5f6 !important; }
+html.dark-mode .app_inducement-block-detail  { color: var(--dm-text2) !important; }
+html.dark-mode .app_questions { background-color: var(--dm-bg) !important; }
+html.dark-mode .accordion-item {
+    background-color: var(--dm-bg2) !important;
+    border-color: var(--dm-border) !important;
+}
+html.dark-mode .accordion-item:hover { background-color: var(--dm-bg3) !important; }
+html.dark-mode .accordion-button,
+html.dark-mode .accordion-body p { color: var(--dm-text) !important; }
+html.dark-mode .accordion-button:not(.collapsed) {
+    background-color: var(--dm-bg3) !important;
+    color: #64b5f6 !important;
+}
+html.dark-mode .app_majors { background-color: var(--dm-bg2) !important; }
+html.dark-mode #app_majors-input {
+    background-color: var(--dm-bg3) !important;
+    color: var(--dm-text) !important;
+    border-color: var(--dm-border) !important;
+}
+html.dark-mode .app_journey-block-course-title h3,
+html.dark-mode .app_journey-block-course-date h3 { color: var(--dm-text) !important; }
+
+/* ---- GIỚI THIỆU ---- */
+html.dark-mode .app_menu { background-color: #0d1b2a !important; }
+html.dark-mode .app-menu-item a { color: #90caf9 !important; }
+html.dark-mode .app_Reason { background-color: var(--dm-bg2) !important; }
+html.dark-mode .app_industryUnits { background-color: var(--dm-bg2) !important; }
+html.dark-mode .app_industryUnits-block { background-color: var(--dm-bg3) !important; }
+html.dark-mode .app_industryUnits-block-part2 { background-color: #1a1a1a !important; }
+html.dark-mode .principal-cardInfo {
+    background-color: var(--dm-bg2) !important;
+    border-color: var(--dm-primary) !important;
+}
+html.dark-mode .app_register-block { background-color: #0a1628 !important; }
+
+/* ---- TIN TỨC & SỰ KIỆN TRANG RIÊNG ---- */
+html.dark-mode .app__featured-news-left-text .title { color: var(--dm-text) !important; }
+html.dark-mode .app__featured-news-left-text .title:hover { color: #64b5f6 !important; }
+html.dark-mode .app__tintuc-item {
+    background-color: var(--dm-bg2) !important;
+    border-color: var(--dm-primary) !important;
+}
+html.dark-mode .app__tintuc-item-text .title { color: var(--dm-text) !important; }
+html.dark-mode .app__tintuc-item-text .title:hover { color: #64b5f6 !important; }
+html.dark-mode .app__tintuc-item-text-des { color: var(--dm-text2) !important; }
+html.dark-mode .app__sukien-card {
+    background-color: var(--dm-bg2) !important;
+    border-color: var(--dm-primary) !important;
+}
+html.dark-mode .app__sukien-content-title { color: var(--dm-text) !important; }
+html.dark-mode .app__sukien-content-des   { color: var(--dm-text2) !important; }
+html.dark-mode .calendar {
+    background-color: var(--dm-bg2) !important;
+    border-color: var(--dm-primary) !important;
+}
+html.dark-mode .weekdays div { color: var(--dm-text) !important; }
+html.dark-mode .days div     { color: var(--dm-text) !important; }
+html.dark-mode .app__lich-content-item {
+    border-color: var(--dm-border) !important;
+    background-color: var(--dm-bg2) !important;
+}
+html.dark-mode .app__lich-content-des { color: var(--dm-text) !important; }
+html.dark-mode .app__lich-prevBtn,
+html.dark-mode .app__lich-nextBtn {
+    background-color: var(--dm-bg3) !important;
+    color: var(--dm-text) !important;
+}
+
+/* ---- SINH VIÊN ---- */
+html.dark-mode .wraper1 { background-color: var(--dm-bg2) !important; }
+html.dark-mode .wraper2 { background-color: #0d1b2a !important; }
+html.dark-mode .wraper21 { border-color: var(--dm-border) !important; }
+
+/* ---- LIÊN HỆ ---- */
+html.dark-mode .contact-section {
+    background: linear-gradient(135deg, #0d1b2a 0%, #0a1628 100%) !important;
+}
+html.dark-mode .contact-info,
+html.dark-mode .contact-form-wrapper {
+    background-color: var(--dm-bg2) !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4) !important;
+}
+html.dark-mode .contact-info h2,
+html.dark-mode .contact-form-wrapper h2 { color: #64b5f6 !important; }
+html.dark-mode .info-item-content h3 { color: var(--dm-text) !important; }
+html.dark-mode .info-item-content p  { color: var(--dm-text2) !important; }
+html.dark-mode .info-item i          { color: #64b5f6 !important; }
+html.dark-mode .form-group label     { color: var(--dm-text) !important; }
+html.dark-mode .form-control {
+    background-color: var(--dm-bg3) !important;
+    color: var(--dm-text) !important;
+    border-color: var(--dm-border) !important;
+}
+html.dark-mode .form-control:focus {
+    border-color: #64b5f6 !important;
+    box-shadow: 0 0 0 3px rgba(100,181,246,0.15) !important;
+}
+html.dark-mode .submit-btn { background-color: #1565c0 !important; }
+html.dark-mode .submit-btn:hover { background-color: #0d47a1 !important; }
+
+/* ---- FOOTER ---- */
+html.dark-mode .footer { background-color: #06101e !important; }
+html.dark-mode #footer_copyright { background-color: #020810 !important; }
+
+/* ---- MODAL ---- */
+html.dark-mode .modal-container { background-color: var(--dm-bg2) !important; }
+html.dark-mode .modal .modal-body { background-color: var(--dm-bg2) !important; }
+html.dark-mode .modal-body .modal-label { color: var(--dm-text) !important; }
+html.dark-mode .modal-body .modal-input {
+    background-color: var(--dm-bg3) !important;
+    color: var(--dm-text) !important;
+    border-color: var(--dm-border) !important;
+}
+
+html.dark-mode #darkModeToggle {
+    background-color: var(--dm-bg2) !important;
+    border-color: var(--dm-border) !important;
+    color: var(--dm-text) !important;
+}
+
+/* ============================================================
+   SEARCH DROPDOWN
+   ============================================================ */
+.search-results-dropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    z-index: 9999999;
+    max-height: 320px;
+    overflow-y: auto;
+    display: none;
+}
+.search-result-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    text-decoration: none !important;
+    color: #333 !important;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.2s;
+}
+.search-result-item:hover {
+    background: #e8f4ff !important;
+}
+.search-result-item:hover .search-result-title { color: #0065ca !important; }
+.search-result-tag {
+    background: #0065ca;
+    color: #fff !important;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 12px;
+    white-space: nowrap;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+.search-result-title {
+    font-size: 13px;
+    flex: 1;
+    color: #333 !important;
+}
+.search-no-result {
+    padding: 16px;
+    color: #888;
+    font-size: 13px;
+    text-align: center;
+}
+html.dark-mode .search-results-dropdown {
+    background-color: var(--dm-bg2) !important;
+    border-color: var(--dm-border) !important;
+}
+html.dark-mode .search-result-item {
+    border-color: var(--dm-border) !important;
+    color: var(--dm-text) !important;
+}
+html.dark-mode .search-result-item:hover { background-color: var(--dm-bg3) !important; }
+html.dark-mode .search-result-item:hover .search-result-title { color: #64b5f6 !important; }
+html.dark-mode .search-result-title { color: var(--dm-text) !important; }
+html.dark-mode .search-result-tag   { background-color: var(--dm-primary) !important; }
+
+/* ============================================================
+   CAROUSEL DOTS
+   ============================================================ */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 14px;
+    padding-bottom: 4px;
+}
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    border: none;
+    display: inline-block;
+    outline: none;
+}
+.carousel-dot.active {
+    background: var(--primary-color, #0065ca);
+    transform: scale(1.3);
+}
+.carousel-dot:hover { background: #999; }
+html.dark-mode .carousel-dot { background: #555; }
+html.dark-mode .carousel-dot.active { background: var(--dm-primary); }
+
+/* ============================================================
+   FORM VALIDATION
+   ============================================================ */
+.form-error {
+    display: block;
+    color: #e53935;
+    font-size: 12px;
+    margin-top: 5px;
+    font-style: italic;
+    animation: fadeInDown 0.2s ease;
+}
+.input-error {
+    border-color: #e53935 !important;
+    box-shadow: 0 0 0 2px rgba(229,57,53,0.15) !important;
+}
+.input-success {
+    border-color: #43a047 !important;
+    box-shadow: 0 0 0 2px rgba(67,160,71,0.12) !important;
+}
+html.dark-mode .form-error { color: #ef9a9a !important; }
+
+/* SUCCESS MESSAGE */
+.success-message {
+    display: none;
+    background: #e8f5e9;
+    border: 1px solid #a5d6a7;
+    color: #2e7d32 !important;
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    font-size: 15px;
+    font-weight: 500;
+}
+html.dark-mode .success-message {
+    background: #1b2f1e !important;
+    border-color: #2e7d32 !important;
+    color: #a5d6a7 !important;
+}
+
+/* ============================================================
+   BACK TO TOP
+   ============================================================ */
+#scrollToTopBtn { transition: opacity 0.3s, transform 0.2s !important; }
+#scrollToTopBtn:hover { transform: translateY(-4px) !important; }
+
+/* ============================================================
+   GOOGLE MAPS
+   ============================================================ */
+.contact-map-wrapper {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+.contact-map-wrapper iframe {
+    display: block;
+    width: 100%;
+    height: 350px;
+    border: none;
+}
+html.dark-mode .contact-map-wrapper {
+    filter: brightness(0.85) contrast(1.1);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+/* ============================================================
+   KEYFRAMES
+   ============================================================ */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1023px) {
+    #darkModeToggle {
+        bottom: 70px;
+        right: 14px;
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}

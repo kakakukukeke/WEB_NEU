@@ -1,0 +1,324 @@
+/* journey at NEU */
+.app_journey {
+    margin-top: 10vh; 
+}
+
+.app_journey-grid{
+    width: 1350px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.app_journey-grid-row{
+  
+    justify-content: center;
+}
+.app_journey-wrapper{
+    display: flex;
+    margin: 0 5vw;
+    flex-wrap: wrap;
+}
+@media screen and (max-width:800px) {
+    .app_journey-wrapper{
+        flex-direction: column;
+    }
+    .app_journey-block{
+        width: 80%;
+        margin-left: 10%;
+        margin-bottom: 5%;
+    }
+}
+.app_journey-title{
+    margin-bottom: 5vh;
+}
+.app_journey-title h2{
+    font-size: 30px;
+    margin-left: 6.5vw;
+}
+
+.app_journey-block{
+    flex-direction: column;
+    
+}
+.app_journey-block-img{
+    position: relative;
+    width: 100%;
+    height: 420px;
+    
+}
+.app_journey-block-img img{    
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+.app_journey-block-img-text{
+    position: absolute;  
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    text-align: justify;
+    overflow: hidden;
+    margin: 90px 30px;
+}
+.app_journey-block-img-text h3{
+    font-weight: 350;
+    opacity: 0;
+    transition:all 0.3s ease;
+    font-size: var(--text-size);
+}
+
+.app_journey-block-img-button {
+    position: absolute;
+    opacity: 0;
+    margin:272px 30px 0;
+    text-align: center;
+    padding: 12px 50px;
+    transition: all 0.3s ease;
+}
+.app_journey-block-img-button h3{
+    font-size: var(--text-size);
+    color: white;
+}
+
+.app_journey-block-course-title h3{
+font-size: var(--text-size);
+margin-left: 30px;
+}
+
+.app_journey-block-course-date h3{
+font-size: var(--text-size);
+font-weight: normal;
+color: rgb(129, 129, 145);
+margin-left: 30px;
+
+}
+
+.app_journey-block-course{
+    margin-bottom: 25px;
+    padding: 8px 0 8px;
+    clip-path:polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
+    transition: all 0.3s ease ;
+}
+.app_journey-block:hover{
+    .app_journey-block-course{
+        background-color: var(--primary-color);}
+    cursor: pointer;
+    .app_journey-block-img img{
+        opacity: 25%;
+    }
+    .app_journey-block-course-date h3{
+        color: white;
+    }
+    .app_journey-block-course-title h3{
+        color: white;
+    }
+    .app_journey-block-img-text h3{
+        opacity: 1;
+    }
+    .app_journey-block-img-button{
+        background-color: var(--primary-color);
+        opacity: 1;
+    }
+}
+/* reasons to choose NEU */
+.app_inducement {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    background-color: rgb(240, 245, 255);
+}
+.app_inducement-title{
+    margin-bottom: 5vh;
+}
+.app_inducement-title h2{
+    font-size: 30px;
+    margin-left: 6.5vw;
+}
+.app_inducement-grid{
+    width: 1350px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.app_inducement-grid-row{
+    display: flex;
+    justify-content: center;
+}
+.app_inducement-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5vw;
+    flex-wrap: wrap;
+}
+@media screen and (max-width:800px) {
+    .app_inducement-wrapper{
+        flex-direction: column;
+    }
+    
+}
+.app_inducement-block{
+    
+    flex-direction: column;
+    border: 0.5px solid #f2f2f2;
+    padding: 30px 50px 20px 50px;
+    background-color: white;
+}
+.app_inducement-block-percent{
+    font-size: var(--title-size);
+    color: var(--primary-color);
+    font-weight: 500;
+}
+.app_inducement-block-reason h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+.app_inducement-block-detail {
+    font-size: 15px;
+    color: rgb(130, 130, 130);
+    margin-top: 5px;
+}
+ /* frequently asked Questions */
+.app_questions {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    width: 100%;
+    height: 100%;
+}
+.app_questions-title {
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+}
+.app_questions-title h2{
+    font-size: 30px;
+    margin-bottom: 5vh;
+    /* margin-left: 6.5vw; */
+}
+.app_questions-title h3 {
+    font-size: var(--text-size);
+    font-weight: normal;
+    /* margin-left: 9.1vw; */
+}
+.app_questions-grid {
+    width: 1350px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.app_questions-grid-row {
+    display: flex;
+    /* justify-content: center; */
+}
+.app_questions-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5vw;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.app_questions-questions-wrapper {
+    width: 77%;
+}
+.accordion-item:hover .accordion-body{
+    background-color: white;
+}
+.accordion-body p{
+    margin-left: 4%;
+}
+@media screen and (max-width:800px) {
+    .app_questions-wrapper{
+        flex-direction: column;
+    }
+    .app_questions-title{
+        width: 80%;
+        flex-direction: row;
+    }
+}
+
+.accordion-item button, .accordion-item p{
+    font-size: 17px;
+    padding: 20px;
+}
+.accordion-item:hover {
+    cursor: pointer;
+    .fa-solid.fa-plus {
+        rotate: 90deg; 
+        transition: all 0.5s ease;
+    }
+    background-color:  rgb(222, 222, 222);
+}
+
+.app_questions-questions-more {
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    text-align: center;
+    margin-top: 8vh;
+    height: 50px;
+    width: 220px;
+    background: linear-gradient(to left, #fff 50%, #0065ca 50%) right;
+    background-size: 200%;
+    transition: all .3s ease-out;
+    border: 2px solid rgb(0, 128, 255);
+    color: var(--primary-color);
+    font-size: 14px;
+}
+
+.app_questions-questions-more:hover {
+    background-position: left;
+    color: white;
+    cursor: pointer;
+}
+
+/* find majors */
+.app_majors {
+    padding-top: 10vh;
+    background-color:rgb(247, 247, 247) ;
+    height: 65vh;
+}
+#app_majors-search{
+    flex-direction: row;
+}
+.app_majors-title{
+    margin-left: 6.5vw;
+}
+.app_majors-title h2{
+    font-size: 30px;
+    margin-bottom: 5vh;
+}
+.app_majors-title h3{
+    font-size: 15px;
+    font-weight: normal;
+    margin-left: 3vw;
+    margin-bottom: 8vh;
+}
+#app_majors-input{
+    margin-left: 15%;
+    height: 50px;
+    width: 50%;
+    font-size: 17px;
+    padding: 20px;
+}
+.app_majors-searchMajors{
+    height: 50px;
+    padding: 10px;
+    font-size: 17px;
+    margin-left: -4px;
+    background-color: var(--primary-color);
+    border: 1px solid rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgb(0, 100, 255), rgb(70, 150, 255));
+    color: white;
+}
+.app_majors-searchMajors:hover{
+    background: linear-gradient(180deg, rgb(37, 123, 253), rgb(140, 187, 250));
+    cursor: pointer;
+}
+#app_majors-allMajors{
+    margin-left: 64.9%;
+    margin-top: 20px;
+    padding: 0px 22px;
+}
+@media screen and (max-width:800px) {
+    .app_majors-searchMajors{
+        font-size: 10px;
+        width: 100px;
+    }
+    
+}
