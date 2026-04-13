@@ -1,6 +1,6 @@
 # TKWeb-Nhom 10
 
-Bài tập nhóm học phần CNTT1165(125)_01-Thiết kế WEB của Nhóm :
+Bài tập nhóm học phần CNTT1165(225)_02-Thiết kế WEB của Nhóm 10 :
 
 Đề bài: 
 - Xây dựng một website hoàn chỉnh sử dụng HTML, CSS, JavaScript (thuần, không framework). 
@@ -20,7 +20,7 @@ Bài tập nhóm học phần CNTT1165(125)_01-Thiết kế WEB của Nhóm :
 
     Hiệu ứng JavaScript – ví dụ: slideshow, menu ẩn/hiện, form validation, v.v.
 
-Đề tài thực hiện: Sửa lại giao diện website Phòng Quản lý Đào tạo của trường Đại học Kinh tế Quốc dân (NEU).   
+Đề tài thực hiện: Thiết kế lại giao diện website Phòng Quản lý Đào tạo của trường Đại học Kinh tế Quốc dân (NEU).   
 
 Các thành viên nhóm:
 
